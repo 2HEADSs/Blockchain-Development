@@ -9,14 +9,14 @@ pragma solidity >=0.8.2 <0.9.0;
  */
 
 contract HomeRepairService {
-    struct MyData {
+    struct Data {
         string repairDescription;
         bool isAccepted;
         uint256 price;
         address[] isConfirmed;
         bool isJobDone;
     }
-    mapping(uint256 => MyData) public request;
+    mapping(uint256 => Data) public request;
     address public owner;
     uint256 homeRepairerBalance;
 
