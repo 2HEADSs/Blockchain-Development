@@ -16,6 +16,7 @@ contract HomeRepairService {
         address[] isConfirmed;
         bool isJobDone;
     }
+    
     mapping(uint256 => Data) public request;
     address public owner;
     uint256 homeRepairerBalance;
