@@ -10,7 +10,5 @@ contract Test {
         for (uint256 i = 0; i < arr.length; i++) {
             res += arr[i];
         }
-
-        
     }
 }
