@@ -14,6 +14,7 @@ contract Test {
     }
 
     function storageArray() external {
+        // get reference
         uint[5] storage numbers = arr;
 
         // make copy
