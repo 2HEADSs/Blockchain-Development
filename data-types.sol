@@ -3,6 +3,13 @@
 pragma solidity >=0.8.2 <0.9.0;
 
 contract Test {
+    
+    struct Vote {
+        address shareholder;
+        uint256 shares;
+        uint256 timestamp;
+    }
+
     uint256[5] public arr = [1, 2, 3, 4, 5];
     uint256 a;
 
