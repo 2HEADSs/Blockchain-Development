@@ -9,7 +9,7 @@ contract Animal {
 }
 
 contract Dog is Animal {
-    function bark() external returns (uint256) {
+    function bark() external pure returns (uint256) {
         return 1;
     }
 }
