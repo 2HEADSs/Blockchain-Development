@@ -16,6 +16,9 @@ contract Test {
     function storageArray() external {
         uint[5] storage numbers = arr;
 
+        // make copy
+        // uint[5] memory numbers = arr;
+
         numbers[1] = 2;
     }
 }
