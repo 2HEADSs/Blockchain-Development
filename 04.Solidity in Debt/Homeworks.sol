@@ -13,13 +13,15 @@ contract DecentralizedAuctionPlatform {
         uint256 auctionId;
         string name;
         string description;
-        uint256 startingPrice;
+        uint256 price;
+        //price
         uint256 startTime;
         uint256 duration;
         bool finishedAction;
     }
     Auction[] public Auctions;
-    uint256 public auctionCount = 0;
+    uint256 public auctionCount = 1;
+
 
     event createActionInfo(
         uint256 startTime,
@@ -27,6 +29,11 @@ contract DecentralizedAuctionPlatform {
         string name,
         string description,
         uint256 startingPrice
+    );
+
+    event bidAuction(
+        uint256 bidPrice,
+        uint256 auctionId
     );
 
     function createAuction(
@@ -63,5 +70,16 @@ contract DecentralizedAuctionPlatform {
         );
     }
 
+    function placeBid(uint256 auctionId, uint256 bidPrice) public payable {
 
+        Auction storage currentAuction = Auctions[auctionId];
+
+        require (bidPrice >= currentAuction.price, "Bid must be higher!!!");
+        currentAuction.price = bidPrice;
+
+        emit bidAuction(
+            auctionId,
+            bidPrice
+        );
+    }
 }
