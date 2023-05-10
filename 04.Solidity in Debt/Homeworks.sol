@@ -9,5 +9,13 @@ pragma solidity >=0.8.2 <0.9.0;
  */
 
 contract DecentralizedAuctionPlatform {
+    struct AuctionData {
+        uint256 startTime;
+        uint256 duration;
+        string itemName;
+        string itemDescription;
+        uint256 startingPrice;
+    }
+
     function createAuction() public {}
 }
