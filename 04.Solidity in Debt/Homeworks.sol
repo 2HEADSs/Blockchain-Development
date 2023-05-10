@@ -10,6 +10,8 @@ pragma solidity >=0.8.2 <0.9.0;
 
 contract DecentralizedAuctionPlatform {
     struct Auction {
+        address creator;
+        uint256 creatorMoney;
         uint256 auctionId;
         string name;
         string description;
@@ -19,9 +21,9 @@ contract DecentralizedAuctionPlatform {
         uint256 duration;
         bool finishedAction;
     }
+    mapping(address => uint256) public availableToWithdrawal;
     Auction[] public Auctions;
     uint256 public auctionCount = 1;
-
 
     event createActionInfo(
         uint256 startTime,
@@ -31,10 +33,9 @@ contract DecentralizedAuctionPlatform {
         uint256 startingPrice
     );
 
-    event bidAuction(
-        uint256 bidPrice,
-        uint256 auctionId
-    );
+    event finalizeBidEmit(bool isFinihsed);
+
+    event bidAuction(uint256 bidPrice, uint256 auctionId);
 
     function createAuction(
         uint256 startTime,
@@ -52,6 +53,8 @@ contract DecentralizedAuctionPlatform {
 
         Auctions.push(
             Auction(
+                msg.sender,
+                0,
                 auctionCount,
                 name,
                 description,
@@ -70,16 +73,29 @@ contract DecentralizedAuctionPlatform {
         );
     }
 
-    function placeBid(uint256 auctionId, uint256 bidPrice) public payable {
-
+    function placeBid(uint256 auctionId, uint256 bidPrice) public {
         Auction storage currentAuction = Auctions[auctionId];
 
-        require (bidPrice >= currentAuction.price, "Bid must be higher!!!");
+        require(bidPrice >= currentAuction.price, "Bid must be higher!!!");
         currentAuction.price = bidPrice;
+        availableToWithdrawal[msg.sender] = currentAuction.price;
 
-        emit bidAuction(
-            auctionId,
-            bidPrice
+        emit bidAuction(auctionId, bidPrice);
+    }
+
+    function finalizeBid(uint256 auctionId) public payable {
+        Auction storage currentAuction = Auctions[auctionId];
+
+        // hardcore finished auction for test only
+        currentAuction.finishedAction = true;
+
+        require(
+            currentAuction.finishedAction == true,
+            "Auction should finished!!!"
         );
+        require(currentAuction.price > 0, "Price must be positive!!!");
+        currentAuction.creatorMoney = currentAuction.price;
+
+        emit finalizeBidEmit(currentAuction.finishedAction);
     }
 }
