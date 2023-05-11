@@ -15,8 +15,8 @@ contract DecentralizedAuctionPlatform {
         uint256 auctionId;
         string name;
         string description;
-        uint256 price;
-        //price
+        uint256 startingPrice;
+        uint256 lastBid;
         uint256 startTime;
         uint256 duration;
         bool finishedAction;
@@ -35,7 +35,7 @@ contract DecentralizedAuctionPlatform {
 
     event finalizeBidEmit(bool isFinihsed);
 
-    event bidAuction(uint256 bidPrice, uint256 auctionId);
+    event bidAuction(uint256 bid, uint256 auctionId);
 
     function createAuction(
         uint256 startTime,
@@ -46,7 +46,7 @@ contract DecentralizedAuctionPlatform {
     ) public {
         require(
             startTime > block.timestamp,
-            "The time must be bigger than timestam"
+            "The time must be bigger than timestamp"
         );
         require(duration > 0, "Time must be pozitive");
         auctionCount++;
@@ -59,6 +59,7 @@ contract DecentralizedAuctionPlatform {
                 name,
                 description,
                 startingPrice,
+                0,
                 startTime,
                 duration,
                 false
@@ -73,29 +74,40 @@ contract DecentralizedAuctionPlatform {
         );
     }
 
-    function placeBid(uint256 auctionId, uint256 bidPrice) public {
+    function placeBid(uint256 auctionId, uint256 bid) public {
         Auction storage currentAuction = Auctions[auctionId];
 
-        require(bidPrice >= currentAuction.price, "Bid must be higher!!!");
-        currentAuction.price = bidPrice;
-        availableToWithdrawal[msg.sender] = currentAuction.price;
+        require(
+            bid >= currentAuction.lastBid,
+            "Bid must be higher!!!"
+        );
+        currentAuction.lastBid = bid;
+        availableToWithdrawal[msg.sender] = bid;
 
-        emit bidAuction(auctionId, bidPrice);
+        emit bidAuction(auctionId, bid);
     }
 
     function finalizeBid(uint256 auctionId) public payable {
         Auction storage currentAuction = Auctions[auctionId];
 
         // hardcore finished auction for test only
-        currentAuction.finishedAction = true;
+        // currentAuction.finishedAction = true;
 
+        if(block.timestamp > currentAuction.startTime + currentAuction.duration){
+            currentAuction.finishedAction = true;
+
+        }
         require(
             currentAuction.finishedAction == true,
             "Auction should finished!!!"
         );
-        require(currentAuction.price > 0, "Price must be positive!!!");
-        currentAuction.creatorMoney = currentAuction.price;
+        require(currentAuction.lastBid > 0, "Bid must be positive!!!");
+        currentAuction.creatorMoney =
+            currentAuction.startingPrice +
+            currentAuction.lastBid;
 
         emit finalizeBidEmit(currentAuction.finishedAction);
     }
+
+
 }
