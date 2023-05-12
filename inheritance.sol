@@ -12,4 +12,8 @@ contract Dog is Animal {
     function bark() external pure returns (uint256) {
         return 1;
     }
+
+contract MyAnimal is Dog{
+    
+}
 }
