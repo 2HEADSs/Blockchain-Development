@@ -1,6 +1,3 @@
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.4;
-
 import "./Event-to-MarketPlace.sol";
 
 contract Marketplace {
@@ -12,11 +9,10 @@ contract Marketplace {
         uint256 _saleStart,
         uint256 _saleEnd,
         uint256 _ticketPric,
+        uint256 _maxTickets,
         string memory _metadata
     ) external {
-        address newEvent = address(
-            new Event(_saleStart, _saleEnd, _name, _ticketPric, _metadata)
-        );
+        address newEvent = address(new Event(_saleStart, _saleEnd, _ticketPric,_maxTickets, _metadata));
 
         events.push(newEvent);
 
