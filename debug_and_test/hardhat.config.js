@@ -1,5 +1,7 @@
 require("@nomicfoundation/hardhat-toolbox");
 
+require('./tasks')
+
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   defaultNetwork: "hardhat",
