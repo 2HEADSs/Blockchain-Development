@@ -1,1 +1,2 @@
-require('./lock')
+require('./lock');
+
