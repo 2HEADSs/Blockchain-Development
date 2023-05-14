@@ -9,15 +9,18 @@ async function main() {
   const lockedAmount = hre.ethers.utils.parseEther("0.001");
 
   const Lock = await hre.ethers.getContractFactory("Lock");
-  const lock = await Lock.deploy(unlockTime, { value: lockedAmount });
+  const lock = await Lock.attach(unlockTime, { value: lockedAmount });
 
-  await lock.deployed();
+  console.log(await lock.deployed());
+  
+  const tx = await lock.withdraw();
+  console.log(tx);
 
-  console.log(
-    `Lock with ${ethers.utils.formatEther(
-      lockedAmount
-    )}ETH and unlock timestamp ${unlockTime} deployed to ${lock.address}`
-  );
+//   console.log(
+//     `Lock with ${ethers.utils.formatEther(
+//       lockedAmount
+//     )}ETH and unlock timestamp ${unlockTime} deployed to ${lock.address}`
+//   );
 }
 
 // We recommend this pattern to be able to use async/await everywhere
