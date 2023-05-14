@@ -9,7 +9,7 @@ module.exports = {
     sepolia: {
       url: "https://sepolia.infura.io/v3/<key>",
     },
-    accounts: [privateKey1, privateKey2],
+    // accounts: [privateKey1, privateKey2],
   },
   solidity: "0.8.18",
 };
