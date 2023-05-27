@@ -21,16 +21,20 @@ contract NFTMarketplace is NFT {
     ) external {
         require(price != 0, "price must be greater than 0");
         require(
-            nftSales[collection][id] == 0,
+            nftSales[collection][id].price == 0,
             "NFT is already listed for sale"
         );
 
-        nftSales[collection][id] = price;
+        nftSales[collection][id].price = price;
 
         IERC721(collection).transferFrom(msg.sender, address(this), id);
     }
 
-    function purchaseNFT(address collection, uint256 id) external payable {
+    function purchaseNFT(
+        address collection,
+        uint256 id,
+        address to
+    ) external payable {
         Sale memory sale = nftSales[collection][id];
 
         require(sale.price != 0, "NFT is not listed for sale");
@@ -38,6 +42,6 @@ contract NFTMarketplace is NFT {
 
         delete nftSales[collection][id];
 
-        IERC721(collection).safeTransferFrom(address(this), msg.sender, id);
+        IERC721(collection).safeTransferFrom(address(this), to, id);
     }
 }
