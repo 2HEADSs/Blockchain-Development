@@ -15,6 +15,6 @@ contract NFTMarketplace is NFT {
         require(nftPrice[collection][id]== 0, "NFT is already listed for sale");
         nftPrice[collection][id] = price;
 
-        IERC721(collection).safeTransferFrom(msg.sender, address(this), id);
+        IERC721(collection).transferFrom(msg.sender, address(this), id);
     }
 }
