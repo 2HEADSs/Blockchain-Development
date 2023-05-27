@@ -44,4 +44,11 @@ contract NFTMarketplace is NFT {
 
         IERC721(collection).safeTransferFrom(address(this), to, id);
     }
+
+    function claimProfit() external {
+        uint256 profit = profits[msg.sender];
+        require(profit != 0, "No profit to claim");
+        profits[msg.sender] = 0;
+        payable(msg.sender).transfer(profit);
+    }
 }
