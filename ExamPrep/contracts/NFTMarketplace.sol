@@ -30,6 +30,15 @@ contract NFTMarketplace is NFT {
         IERC721(collection).transferFrom(msg.sender, address(this), id);
     }
 
+    function unlistNFT(address collection, uint256 id, address to) external {
+        Sale memory sale = nftSales[collection][id];
+        require(sale.price != 0, "NFT is not listed for sale");
+        require(sale.seller == msg.sender, "Only seller can unlist NFT");
+        delete nftSales[collection][id];
+
+        IERC721(msg.sender).safeTransferFrom(address(this), sale.seller, id);
+    }
+
     function purchaseNFT(
         address collection,
         uint256 id,
@@ -49,7 +58,10 @@ contract NFTMarketplace is NFT {
         uint256 profit = profits[msg.sender];
         require(profit != 0, "No profit to claim");
         profits[msg.sender] = 0;
-        (bool success,) = payable(msg.sender).call{value: profit} ("");
-        require(success, "Address: unable to send value, recipient may have reverted");
+        (bool success, ) = payable(msg.sender).call{value: profit}("");
+        require(
+            success,
+            "Address: unable to send value, recipient may have reverted"
+        );
     }
 }
