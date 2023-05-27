@@ -13,36 +13,39 @@ contract NFT is ERC721, ERC721URIStorage, Ownable {
 
     constructor() ERC721("MyToken", "MTK") {}
 
-    function createNFT(address to, string memory uri) public onlyOwner {
+    function createNFT(string memory uri) public onlyOwner {
         uint256 tokenId = _tokenIdCounter.current();
         _tokenIdCounter.increment();
         _safeMint(msg.sender, tokenId);
         _setTokenURI(tokenId, uri);
     }
 
-        function supportsInterface(bytes4 interfaceId) public view virtual override(ERC721, ERC721URIStorage) returns (bool) {
-        return interfaceId == bytes4(0x49064906) || super.supportsInterface(interfaceId);
+    function supportsInterface(
+        bytes4 interfaceId
+    ) public view virtual override(ERC721, ERC721URIStorage) returns (bool) {
+        return
+            interfaceId == bytes4(0x49064906) ||
+            super.supportsInterface(interfaceId);
     }
 
-    function _burn(uint256 tokenId) internal override(ERC721, ERC721URIStorage) {
-        super._burn(tokenId); 
+    function _burn(
+        uint256 tokenId
+    ) internal override(ERC721, ERC721URIStorage) {
+        super._burn(tokenId);
     }
 
-    function tokenURI(uint256 tokenId)
-        public
-        view
-        override(ERC721, ERC721URIStorage)
-        returns (string memory)
-    {
+    function tokenURI(
+        uint256 tokenId
+    ) public view override(ERC721, ERC721URIStorage) returns (string memory) {
         return super.tokenURI(tokenId);
     }
 
-    function supportsInterface(bytes4 interfaceId)
-        public
-        view
-        override(ERC721, ERC721URIStorage)
-        returns (bool)
-    {
-        return super.supportsInterface(interfaceId);
-    }
+    // function supportsInterface(bytes4 interfaceId)
+    //     public
+    //     view
+    //     override(ERC721, ERC721URIStorage)
+    //     returns (bool)
+    // {
+    //     return super.supportsInterface(interfaceId);
+    // }
 }
