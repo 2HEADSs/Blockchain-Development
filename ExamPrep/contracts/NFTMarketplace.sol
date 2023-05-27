@@ -3,18 +3,41 @@ pragma solidity 0.8.17;
 
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 
-
 import "./NFT.sol";
 
 contract NFTMarketplace is NFT {
-    
-    mapping (address => mapping(uint256=> uint256)) public nftPrice;
+    struct Sale {
+        address seller;
+        uint256 price;
+    }
 
-    function listNFTForSale(address collection, uint256 id, uint256 price) external{
-        require(price !=0, "price must be greater than 0"); 
-        require(nftPrice[collection][id]== 0, "NFT is already listed for sale");
-        nftPrice[collection][id] = price;
+    mapping(address => mapping(uint256 => Sale)) public nftSales;
+    mapping(address => uint256) public profits;
+
+    function listNFTForSale(
+        address collection,
+        uint256 id,
+        uint256 price
+    ) external {
+        require(price != 0, "price must be greater than 0");
+        require(
+            nftSales[collection][id] == 0,
+            "NFT is already listed for sale"
+        );
+
+        nftSales[collection][id] = price;
 
         IERC721(collection).transferFrom(msg.sender, address(this), id);
+    }
+
+    function purchaseNFT(address collection, uint256 id) external payable {
+        Sale memory sale = nftSales[collection][id];
+
+        require(sale.price != 0, "NFT is not listed for sale");
+        require(msg.value == sale.price, "Incorrect price");
+
+        delete nftSales[collection][id];
+
+        IERC721(collection).safeTransferFrom(address(this), msg.sender, id);
     }
 }
