@@ -36,7 +36,7 @@ contract NFTMarketplace is NFT {
         require(sale.seller == msg.sender, "Only seller can unlist NFT");
         delete nftSales[collection][id];
 
-        IERC721(msg.sender).safeTransferFrom(address(this), sale.seller, id);
+        IERC721(msg.sender).safeTransferFrom(address(this), to, id);
     }
 
     function purchaseNFT(
