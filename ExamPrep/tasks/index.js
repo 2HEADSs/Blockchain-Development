@@ -1,7 +1,9 @@
 task("deploy", "Prints an account's balance")
     .addParam("account", "The account's address")
     .setAction(async () => {
-        const Lock = await hre.ethers.getContractFactory("Lock");
+        const [deployer] = await ethers.getSigners();
+        const MarketplaceFactory = await ethers.getContractFactory("NFTMarketplace", deployer);
+
         const lock = await Lock.deploy(unlockTime, { value: lockedAmount });
 
         await lock.deployed();
