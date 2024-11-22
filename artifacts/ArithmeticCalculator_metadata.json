@@ -130,11 +130,11 @@
 	},
 	"sources": {
 		"ArithmeticCalculator.sol": {
-			"keccak256": "0x940559aebbda1d690aaee2f0561314690bc7c512d5412bc8bff276ef95dd3afb",
+			"keccak256": "0x15686ecfe8b8df41ca005cc85d54c88a6ed9e44028a7b34e859f961eb35f3089",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e0a09a36899ce760fc2c5590e47ea4ac81f2f5ac5316b92733678c1ebc3adac8",
-				"dweb:/ipfs/QmVGfkPnhAxoSpYzQmetvU5cG4XkBa8dZfD9bN6Uas45ty"
+				"bzz-raw://29949e1239cef165a9a1dc63739746c3a10de3cf74c75cd8e6656324e533ef84",
+				"dweb:/ipfs/Qmexsy7wNvQnCLGR2jdBswESNKXsHU11LD7S4EJegnkLmp"
 			]
 		}
 	},

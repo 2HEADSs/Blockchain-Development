@@ -31,6 +31,13 @@ contract ArithmeticCalculator {
         pure
         returns (uint256)
     {
+        if (firstNum <= 0 || secondNum <= 0) {
+            revert("Use positive nums");
+        }
+
+        if (firstNum < secondNum) {
+            revert("Divide function can return only positive nums");
+        }
         return firstNum / secondNum;
     }
 }
