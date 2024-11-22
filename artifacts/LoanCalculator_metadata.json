@@ -1,0 +1,110 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "interestRate",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "loanPeriod",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "principal",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "InterestRate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "loanPeriodInYears",
+						"type": "uint256"
+					}
+				],
+				"name": "calculateTotalPayable",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "total",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Loan Calculator.sol": "LoanCalculator"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Loan Calculator.sol": {
+			"keccak256": "0x72e72ad4f83e226e0616de938714fbc137b4794b636b8296b19fb0040e6c38a6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5dc5774adb1415c9906308058826933ff7ac68abb244f959a81a94c18c6e8a7a",
+				"dweb:/ipfs/QmNVE77FXMne98ABwR3LupXARkt8GWU5aZqGmNnGXBpvDQ"
+			]
+		}
+	},
+	"version": 1
+}
