@@ -1,0 +1,70 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "salary",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "rating",
+						"type": "uint256"
+					}
+				],
+				"name": "calculateCompoundInterest",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"EthereumAndSmartContractsBasicsExercise/Payroll.sol": "Payroll"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"EthereumAndSmartContractsBasicsExercise/Payroll.sol": {
+			"keccak256": "0x8301fd7ced3626f28123dafa0e3d49d796cd62b2f4fa4cf9f93e50578ab31ce1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://acea66741468b54b4b6549f4c6dfb70649a47fcf2596bf1b4c37b7b6c1a36b60",
+				"dweb:/ipfs/Qmf9QpiPqgbkawYqvbg7zJWdwPRmSQQcLLmTpnPrAhMKtj"
+			]
+		}
+	},
+	"version": 1
+}
