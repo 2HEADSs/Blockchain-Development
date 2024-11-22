@@ -9,22 +9,22 @@
 				"inputs": [
 					{
 						"internalType": "string",
-						"name": "",
+						"name": "message",
 						"type": "string"
 					}
 				],
-				"name": "interestRate",
+				"name": "InvalidInterestRate",
 				"type": "error"
 			},
 			{
 				"inputs": [
 					{
 						"internalType": "string",
-						"name": "",
+						"name": "message",
 						"type": "string"
 					}
 				],
-				"name": "loanPeriod",
+				"name": "InvalidLoanPeriod",
 				"type": "error"
 			},
 			{
@@ -54,19 +54,6 @@
 					}
 				],
 				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "total",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -98,11 +85,11 @@
 	},
 	"sources": {
 		"Loan Calculator.sol": {
-			"keccak256": "0x72e72ad4f83e226e0616de938714fbc137b4794b636b8296b19fb0040e6c38a6",
+			"keccak256": "0xa440ecbf4d4bd3fc4ee03da80e2afc0c1ab5d92960a3ffcaaee4f5671db9fe0d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5dc5774adb1415c9906308058826933ff7ac68abb244f959a81a94c18c6e8a7a",
-				"dweb:/ipfs/QmNVE77FXMne98ABwR3LupXARkt8GWU5aZqGmNnGXBpvDQ"
+				"bzz-raw://37b543656109246d5e1bac262f87d38c9317f5712b929ec7efe5c19d0f82b861",
+				"dweb:/ipfs/QmZbQpA8gYzox4n2dcVBB3ujY4sAJ2KG7P8tSiiKhMHFhu"
 			]
 		}
 	},
