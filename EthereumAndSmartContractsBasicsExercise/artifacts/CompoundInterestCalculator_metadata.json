@@ -63,11 +63,11 @@
 	},
 	"sources": {
 		"EthereumAndSmartContractsBasicsExercise/CompoundInterestCalculator.sol": {
-			"keccak256": "0xb669bc08769fb7a94e8aa8822a88afcc420e87577b7efd8e2db7fe016b04b55b",
+			"keccak256": "0xb102d3441ea41cbfdb4292a755563beca8847b49b7d43b011192e53f41e8cbe0",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8910955225a3d5874f256bee51629c54106b2265bad101fb4cb80f02ce14ec88",
-				"dweb:/ipfs/QmWuvGEu3GaqbLuMWbrM62qnFWWVWmiYs7rjeHc4caKLyN"
+				"bzz-raw://d9af1cc2157e9fe62b655fefe6574d732999f8fa86ce17e04a4774bdd2f73302",
+				"dweb:/ipfs/QmYYUPgovV6zfXcruoPAxwjmNpDm36SKjTG3ybKjTg9QWc"
 			]
 		}
 	},
