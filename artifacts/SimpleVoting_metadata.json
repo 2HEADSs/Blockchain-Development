@@ -4,7 +4,124 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"inputs": [],
+				"name": "InvalidCandidate",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "candidate1",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "candidate2",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "chooseWinner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "votedEnded",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "candidate",
+						"type": "address"
+					}
+				],
+				"name": "votes",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "votesCandidateOne",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "votesCandidateTwo",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "winner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -33,11 +150,11 @@
 	},
 	"sources": {
 		"HelloWorld.sol": {
-			"keccak256": "0x2f75d5abfa2117e91d335e9301f2d6de100f788c30e1ea82647601bdd8c18065",
+			"keccak256": "0xf795277ea520a51c659a5f5bc6cc5c0cd502632ea45a86528a57f7c9c91e3dfb",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7d26346d87d9c1cc86975c4dcc85910df03298739aa46b6b22941e38e07fe617",
-				"dweb:/ipfs/QmSdoExzaT5Rn3LC46SBaMC8AhJ6kjPHbYyhLqCk131voX"
+				"bzz-raw://364fe37bdb2f618aebca748438d47788690da4830ef8cbfde98c3b87f5824aed",
+				"dweb:/ipfs/Qmcx3keaEfhkWSSv2W59Hv6H3GmeaN4WCqzrgRiBDKF8Zu"
 			]
 		}
 	},
