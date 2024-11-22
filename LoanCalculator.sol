@@ -8,10 +8,10 @@ contract LoanCalculator {
 
     function calculateTotalPayable(
         uint256 principal,
-        uint256 InterestRate,
+        uint256 interestRate,
         uint256 loanPeriodInYears
     ) public returns (uint256) {
-        if (InterestRate < 0 || InterestRate > 100) {
+        if (interestRate < 0 || interestRate > 100) {
             revert InvalidInterestRate(
                 "Interest rate should be between 0 and 100"
             );
@@ -23,7 +23,7 @@ contract LoanCalculator {
 
         total =
             principal +
-            (principal * InterestRate * loanPeriodInYears) /
+            (principal * interestRate * loanPeriodInYears) /
             100;
         return total;
     }

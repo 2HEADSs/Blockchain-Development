@@ -8,28 +8,6 @@
 			{
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "message",
-						"type": "string"
-					}
-				],
-				"name": "InvalidInterestRate",
-				"type": "error"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "message",
-						"type": "string"
-					}
-				],
-				"name": "InvalidLoanPeriod",
-				"type": "error"
-			},
-			{
-				"inputs": [
-					{
 						"internalType": "uint256",
 						"name": "principal",
 						"type": "uint256"
@@ -53,7 +31,7 @@
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "nonpayable",
+				"stateMutability": "pure",
 				"type": "function"
 			}
 		],
@@ -70,7 +48,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"LoanCalculator.sol": "LoanCalculator"
+			"EthereumAndSmartContractsBasicsExercise/CompoundInterestCalculator.sol": "CompoundInterestCalculator"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -84,12 +62,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"LoanCalculator.sol": {
-			"keccak256": "0x8eda5102274ef2d13fea0dd1e7f7c769f0b11b568423a499d21907b313208891",
+		"EthereumAndSmartContractsBasicsExercise/CompoundInterestCalculator.sol": {
+			"keccak256": "0xb669bc08769fb7a94e8aa8822a88afcc420e87577b7efd8e2db7fe016b04b55b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://390648674e7e74b5425de11cad4c17b56fe1a055a9be822e40cf0142f9f6f51c",
-				"dweb:/ipfs/QmTvftNUq8MZ3FZPjgp7msFYHFXh6nFkpfRpiwchCWsHtP"
+				"bzz-raw://8910955225a3d5874f256bee51629c54106b2265bad101fb4cb80f02ce14ec88",
+				"dweb:/ipfs/QmWuvGEu3GaqbLuMWbrM62qnFWWVWmiYs7rjeHc4caKLyN"
 			]
 		}
 	},
