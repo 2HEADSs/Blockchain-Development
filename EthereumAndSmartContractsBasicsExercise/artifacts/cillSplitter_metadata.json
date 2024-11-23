@@ -1,0 +1,57 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "message",
+						"type": "string"
+					}
+				],
+				"name": "splitNotEven",
+				"type": "error"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"EthereumAndSmartContractsBasicsExercise/BillSplitter.sol": "cillSplitter"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"EthereumAndSmartContractsBasicsExercise/BillSplitter.sol": {
+			"keccak256": "0xfe99ae944e4b51fc87e1073699d95af2a29ef740c6f3fce783d36acf132fa09d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://985a928a8c47e29edbfc47ca7f0338a37d4f5db1aa24991a63648cf7e95d5cc0",
+				"dweb:/ipfs/QmYvHMRE3pv4KSPyfChY96FbejSD8UbMMPSRP38sJEGGdJ"
+			]
+		}
+	},
+	"version": 1
+}
