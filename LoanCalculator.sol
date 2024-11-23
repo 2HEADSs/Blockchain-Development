@@ -4,7 +4,7 @@ pragma solidity 0.8.28;
 contract LoanCalculator {
     error InvalidInterestRate(string message);
     error InvalidLoanPeriod(string message);
-    uint256 total;
+    uint256 public total;
 
     function calculateTotalPayable(
         uint256 principal,

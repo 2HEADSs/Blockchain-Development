@@ -13,7 +13,7 @@
 						"type": "string"
 					}
 				],
-				"name": "InvalidInterestRate",
+				"name": "GoalNotMet",
 				"type": "error"
 			},
 			{
@@ -24,28 +24,12 @@
 						"type": "string"
 					}
 				],
-				"name": "InvalidLoanPeriod",
+				"name": "RewardAlreadyClaimed",
 				"type": "error"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "principal",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "interestRate",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "loanPeriodInYears",
-						"type": "uint256"
-					}
-				],
-				"name": "calculateTotalPayable",
+				"inputs": [],
+				"name": "baseReward",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -53,12 +37,38 @@
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "total",
+				"name": "goalAmount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "rewardClaimed",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "spendingTotal",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -83,7 +93,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"LoanCalculator.sol": "LoanCalculator"
+			"EthereumAndSmartContractsBasicsExercise/GoalTracker.sol": "goalTracker"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -97,12 +107,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"LoanCalculator.sol": {
-			"keccak256": "0x9c6fa89ca60f87fee3ce5302722aacbc51e1a2a094c56f5d678d9eb4fde4bbbf",
+		"EthereumAndSmartContractsBasicsExercise/GoalTracker.sol": {
+			"keccak256": "0x1ae28f8cb8e5c41261dc3064bb8c579099f0ae03d521c7a0d910bdcbb5b078a3",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d3d13c67077baf0e75e649f053a1f7787532c75208f9664841463be843836140",
-				"dweb:/ipfs/QmZtGiN3kKfcXcmRd3v2aUSnXoHy1TQpfDaYMkXA63VYJf"
+				"bzz-raw://a8b1c40cc9493c5ec17d2af08722f519168eb571dfbbbb07a258c93bb6b0d659",
+				"dweb:/ipfs/QmUwtaDVKqnxSLSRKiAZtLtXn9yys9TEthdkKUK8JN7ACU"
 			]
 		}
 	},

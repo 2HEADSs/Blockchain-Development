@@ -135,7 +135,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"votingContract.sol": "SimpleVoting"
+			"VotingContract.sol": "SimpleVoting"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -149,7 +149,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"votingContract.sol": {
+		"VotingContract.sol": {
 			"keccak256": "0xf795277ea520a51c659a5f5bc6cc5c0cd502632ea45a86528a57f7c9c91e3dfb",
 			"license": "MIT",
 			"urls": [
