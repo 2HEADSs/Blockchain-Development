@@ -6,27 +6,27 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
+				"inputs": [],
+				"name": "addNumber",
+				"outputs": [
 					{
-						"internalType": "address",
-						"name": "receiver",
-						"type": "address"
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
-				"name": "addShares",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
 				"inputs": [
 					{
-						"internalType": "address",
+						"internalType": "uint256",
 						"name": "",
-						"type": "address"
+						"type": "uint256"
 					}
 				],
-				"name": "shares",
+				"name": "arr",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -51,7 +51,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"SolidityFund/CrowdFunding.sol": "CrowdFunding"
+			"SolidityFund/CrowdFunding.sol": "testArray"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
