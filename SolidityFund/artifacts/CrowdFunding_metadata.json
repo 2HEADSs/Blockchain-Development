@@ -8,14 +8,37 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "receiver",
-						"type": "address"
+						"internalType": "uint256",
+						"name": "_initialSharePrice",
+						"type": "uint256"
 					}
 				],
-				"name": "addShares",
-				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "InsuficientAmount",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "buyShares",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "sharePrice",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -31,6 +54,61 @@
 					{
 						"internalType": "uint256",
 						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalShare",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "holder",
+						"type": "address"
+					}
+				],
+				"name": "vote",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "votes",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "shareholder",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "shares",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "timestamp",
 						"type": "uint256"
 					}
 				],
@@ -66,11 +144,11 @@
 	},
 	"sources": {
 		"SolidityFund/CrowdFunding.sol": {
-			"keccak256": "0x820b11d8a634d12ecf3fc4cd62d41838b97f6ff22a85a60b262af6195e74444c",
+			"keccak256": "0x2bf43a49f7a66ddae00e8e903ffb185669b6c1f1ca7f77e832ba236b8ff92217",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8b55afd37357fda12bbf86b22eff26611e9183e195b80fbdabd301db854ccb27",
-				"dweb:/ipfs/QmSfCtYRXaBX4h4LtshtwrFEhj8q9E6RXaNojnMfY1JPFK"
+				"bzz-raw://8276cdf8611598ecf87d430eff0b9da494ca87b0b46d7d75cefeae2d10e22baa",
+				"dweb:/ipfs/QmeaE5FVKFfxWHX8RM7kzAET2djHpET5hF3fqFR3YThQSG"
 			]
 		}
 	},

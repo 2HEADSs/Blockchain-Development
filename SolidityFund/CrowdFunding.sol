@@ -1,23 +1,42 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.28;
+struct Vote {
+    address shareholder;
+    uint256 shares;
+    uint256 timestamp;
+}
+
+error InsuficientAmount();
 
 contract CrowdFunding {
     mapping(address => uint256) public shares;
+    Vote[] public votes;
+    uint256 public sharePrice;
+    uint256 public totalShare;
 
-    function addShares(address receiver) external {
-        shares[receiver] += 1000;
+    constructor(uint256 _initialSharePrice) {
+        sharePrice = _initialSharePrice;
     }
-}
 
-contract testFixedArray {
-    uint256[5] public arr = [1, 2, 3, 4, 5];
-
-    function addNumber() external view returns (uint256) {
-        uint256 res;
-        for (uint256 i = 0; i < arr.length; i++) {
-            res += arr[i];
+    function buyShares() external payable {
+        if(msg.value < sharePrice){
+            revert InsuficientAmount(); 
         }
-        return res;
+        if(msg.value % sharePrice >0){
+            revert InsuficientAmount();
+        }
+        uint256 sharesToReceive = msg.value / sharePrice;
+        totalShare += sharesToReceive;
+        shares[msg.sender] += sharesToReceive;
+    }
+
+    function vote(address holder) external {
+        votes.push(
+            Vote({
+                shareholder: holder,
+                shares: shares[holder],
+                timestamp: block.timestamp
+            })
+        );
     }
 }
-
