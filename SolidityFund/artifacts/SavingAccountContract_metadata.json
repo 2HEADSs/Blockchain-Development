@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "periodLimit",
+						"type": "uint256"
+					}
+				],
+				"name": "createSavingsPlan",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"SolidityFund/DecentralizedSavingsAccount.sol": "SavingAccountContract"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"SolidityFund/DecentralizedSavingsAccount.sol": {
+			"keccak256": "0x82f01a5fc4976ad568a9a8decbe2899c60eb0d827bd7a4b8b64b72fa17396f03",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8ba0367657d7396b739002a98012f7df5f1ea5a24624cdb9dc59313c13a3a300",
+				"dweb:/ipfs/QmU6ky8sV3sjajywCVwUTmATiLPFwtdj1P8QFW7jWMuxgq"
+			]
+		}
+	},
+	"version": 1
+}

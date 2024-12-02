@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"SolidityFund/DecentralizedSavingsAccount.sol": "SavingAccount"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"SolidityFund/DecentralizedSavingsAccount.sol": {
+			"keccak256": "0xf59f47a9d01a155ca6356c28b9c290a8431c683474bc591558bdd9da6ea4f7c1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e70b76177ec3e24cdbf11af93664a2b7ef45d3ded7f88010eaf9e61fee314635",
+				"dweb:/ipfs/QmYRFTAJhKrrek7QpU1r1S1R7ofUrHxw3EQYyRuTXugrx8"
+			]
+		}
+	},
+	"version": 1
+}
