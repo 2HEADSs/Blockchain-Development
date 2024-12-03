@@ -13,9 +13,54 @@
 						"type": "uint256"
 					}
 				],
-				"name": "createSavingsPlan",
+				"name": "createSavingPlan",
 				"outputs": [],
 				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "seeAccounts",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "length",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "viewSavingsPlan",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "balance",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "withdrawFunds",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -47,11 +92,11 @@
 	},
 	"sources": {
 		"SolidityFund/DecentralizedSavingsAccount.sol": {
-			"keccak256": "0x263a3e9be11c4182cae53bf60e79f295be66c1369b5afc1a3adec60ff628cc0c",
+			"keccak256": "0xf26daa380391dc4c5cf3a30b6a65be4f16f7cb22efabbab016f51555cd3b1729",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d3fa34739d1dc71734e92183024e571c60bec777e2195eb173573c7c5be4a990",
-				"dweb:/ipfs/QmZc3ErHv3FMwMxPMfUbKSZKqhDKq2JB7AYkvkbLs9M6vb"
+				"bzz-raw://bb71c60640fefd9d723f8a1fc1358ab4a589b2652e799cb10ea67e0cc6b99ed5",
+				"dweb:/ipfs/QmduNv4wjegAzrth4QMAx9e8KnTgwZ3NR93Bgjc9hPeWGs"
 			]
 		}
 	},
