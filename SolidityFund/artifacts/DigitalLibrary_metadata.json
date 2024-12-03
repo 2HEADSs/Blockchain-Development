@@ -1,0 +1,141 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newLibrarian",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "bookIndex",
+						"type": "uint256"
+					}
+				],
+				"name": "addLibrarian",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "allBooks",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "newStatus",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "bookIndex",
+						"type": "uint256"
+					}
+				],
+				"name": "changeStatus",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "title",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "author",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "publicationDate",
+						"type": "uint256"
+					}
+				],
+				"name": "createBook",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "bookIndex",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "newExpirationDate",
+						"type": "uint256"
+					}
+				],
+				"name": "extendExpirationDate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"SolidityFund/DigitalLibrary.sol": "DigitalLibrary"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"SolidityFund/DigitalLibrary.sol": {
+			"keccak256": "0x0bdce9edd0e50b9a9d56f8c9f3e6ac690513b3ddcfc764bdc1685fc8020db03b",
+			"urls": [
+				"bzz-raw://50dc5e2320ccdb7abec26d1917e17c73b2b1481c19bf5a5ca86f9f65d58ed6bf",
+				"dweb:/ipfs/QmT7nyJZ2QFaV2DiejaKc7e3qEGAeHLTHUUHeCrxBsMmEw"
+			]
+		}
+	},
+	"version": 1
+}
