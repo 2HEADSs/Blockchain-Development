@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "callFeed",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "feedResult",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract InfoFeed",
+						"name": "addr",
+						"type": "address"
+					}
+				],
+				"name": "setFeed",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Inheritance and Modularity/ExternalCall.sol": "Consumer"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Inheritance and Modularity/ExternalCall.sol": {
+			"keccak256": "0x2bf1e905a1656e4f35ad5e2479ef1ec725f1197c5343fbb935dde85b6d13477c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://28acdd2c9f57ba5f1bc0563aa8ba072a494f232d964e14524593fa8f01c5cb30",
+				"dweb:/ipfs/QmVwVgHv1YsFaU48GFqdHRefDozXdtWHhNYZwnFu9ZUdfi"
+			]
+		}
+	},
+	"version": 1
+}
