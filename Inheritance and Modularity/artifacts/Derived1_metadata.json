@@ -1,0 +1,88 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "newBaseOne",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "newBaseTwo",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "baseOne",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "baseTwo",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Inheritance and Modularity/Constructor.sol": "Derived1"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Inheritance and Modularity/Constructor.sol": {
+			"keccak256": "0x1ec715906da01f54ec2d34abb2644ac18e956c74e771f293bc73c924792c6bb5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7b72d16b6934ee0bb8e778697d22c2b418787cba19a91c5256038d66ae88e73d",
+				"dweb:/ipfs/QmT2ryBGzzFqvsdHmx2jraXBLKDUj6icpet9K7FY1FnqaV"
+			]
+		}
+	},
+	"version": 1
+}

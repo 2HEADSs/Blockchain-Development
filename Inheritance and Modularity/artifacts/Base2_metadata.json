@@ -6,16 +6,27 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "sound",
-				"outputs": [
+				"inputs": [
 					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
+						"internalType": "uint256",
+						"name": "newBaseTwo",
+						"type": "uint256"
 					}
 				],
-				"stateMutability": "pure",
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "baseTwo",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -32,7 +43,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"Inheritance and Modularity/InheritanceAnimal.sol": "Cat"
+			"Inheritance and Modularity/Constructor.sol": "Base2"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -46,12 +57,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"Inheritance and Modularity/InheritanceAnimal.sol": {
-			"keccak256": "0x5938875553adce947e71af38eb5242ced6cc5294bfa1cd1a44df9efcd7c24d18",
+		"Inheritance and Modularity/Constructor.sol": {
+			"keccak256": "0x1ec715906da01f54ec2d34abb2644ac18e956c74e771f293bc73c924792c6bb5",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3d21f7598a449c267934914e10005cfd619b8131b154fd7e235a832cd5bafe12",
-				"dweb:/ipfs/QmbpuXDWZtrP7ZJiRe54bgnqB5xsoPwCw1QivoqRRDwVpW"
+				"bzz-raw://7b72d16b6934ee0bb8e778697d22c2b418787cba19a91c5256038d66ae88e73d",
+				"dweb:/ipfs/QmT2ryBGzzFqvsdHmx2jraXBLKDUj6icpet9K7FY1FnqaV"
 			]
 		}
 	},

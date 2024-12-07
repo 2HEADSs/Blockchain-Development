@@ -7,15 +7,14 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "sound",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "pure",
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "register",
+				"outputs": [],
+				"stateMutability": "payable",
 				"type": "function"
 			}
 		],
@@ -32,7 +31,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"Inheritance and Modularity/InheritanceAnimal.sol": "Cat"
+			"Inheritance and Modularity/CustomModifier.sol": "Onwed"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -46,12 +45,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"Inheritance and Modularity/InheritanceAnimal.sol": {
-			"keccak256": "0x5938875553adce947e71af38eb5242ced6cc5294bfa1cd1a44df9efcd7c24d18",
+		"Inheritance and Modularity/CustomModifier.sol": {
+			"keccak256": "0x5b771471ecbfb7dad8c71e6ee01fe9d0c25c4b0905da0579051fb5352ab3161f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3d21f7598a449c267934914e10005cfd619b8131b154fd7e235a832cd5bafe12",
-				"dweb:/ipfs/QmbpuXDWZtrP7ZJiRe54bgnqB5xsoPwCw1QivoqRRDwVpW"
+				"bzz-raw://17d4f3e68c3219b2c154492fca9ee09278bccc1cfe7e931a8702b09a1b9de598",
+				"dweb:/ipfs/QmVqweaZ8TNfCsA2yGfsV7P9K8z7ymXTbjemWhs1z6KPdk"
 			]
 		}
 	},

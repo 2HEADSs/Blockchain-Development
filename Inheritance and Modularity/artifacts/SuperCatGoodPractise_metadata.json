@@ -32,7 +32,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"Inheritance and Modularity/InheritanceAnimal.sol": "Cat"
+			"Inheritance and Modularity/InheritanceAnimal.sol": "SuperCatGoodPractise"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},

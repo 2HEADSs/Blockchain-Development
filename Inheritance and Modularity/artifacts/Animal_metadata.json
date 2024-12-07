@@ -47,11 +47,11 @@
 	},
 	"sources": {
 		"Inheritance and Modularity/InheritanceAnimal.sol": {
-			"keccak256": "0x4c9f2507006d07da212a28e25926968bc5cbb1e27a2af2df79d9af57109b7904",
+			"keccak256": "0x5938875553adce947e71af38eb5242ced6cc5294bfa1cd1a44df9efcd7c24d18",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://44c54350637efc0529e82cedb8f8f6bf80ab1e5993f99bb03fb6a6790d2b56d4",
-				"dweb:/ipfs/QmfVwAvAMeffE3EzV7GocSJnYsyy2bnB49EYMMB6QkALkJ"
+				"bzz-raw://3d21f7598a449c267934914e10005cfd619b8131b154fd7e235a832cd5bafe12",
+				"dweb:/ipfs/QmbpuXDWZtrP7ZJiRe54bgnqB5xsoPwCw1QivoqRRDwVpW"
 			]
 		}
 	},

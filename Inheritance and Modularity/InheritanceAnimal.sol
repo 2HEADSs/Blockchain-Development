@@ -13,8 +13,16 @@ contract Cat is Animal {
     }
 }
 
-contract SuperCat is Animal, Cat {
+//not good practise
+contract SuperCatNotGoodPractise is Animal, Cat {
     function sound() public pure override(Animal, Cat) returns (string memory) {
+        return string(abi.encodePacked(super.sound(), ",  and I am super"));
+    }
+}
+
+//good pracite
+contract SuperCatGoodPractise is Cat {
+    function sound() public pure override returns (string memory) {
         return string(abi.encodePacked(super.sound(), ",  and I am super"));
     }
 }
