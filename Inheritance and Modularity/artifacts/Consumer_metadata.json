@@ -21,7 +21,20 @@
 			{
 				"inputs": [
 					{
-						"internalType": "contract InfoFeed",
+						"internalType": "address payable",
+						"name": "_to",
+						"type": "address"
+					}
+				],
+				"name": "sendViaSend",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract IMyInfoFeed",
 						"name": "addr",
 						"type": "address"
 					}
@@ -60,11 +73,11 @@
 	},
 	"sources": {
 		"Inheritance and Modularity/ExternalCall.sol": {
-			"keccak256": "0x2bf1e905a1656e4f35ad5e2479ef1ec725f1197c5343fbb935dde85b6d13477c",
+			"keccak256": "0xcd9588e051ba64f88231af624b6c358968cac7e49766b20a443c42a4e8cb30a9",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://28acdd2c9f57ba5f1bc0563aa8ba072a494f232d964e14524593fa8f01c5cb30",
-				"dweb:/ipfs/QmVwVgHv1YsFaU48GFqdHRefDozXdtWHhNYZwnFu9ZUdfi"
+				"bzz-raw://11be5b0f90923aba13e62436740d4d0df7c2ea9b12c4e9b8869421c0e55a888a",
+				"dweb:/ipfs/QmQjefDgJ2gWDMLAdynPhmPNZmafFaCYT7y7iurbtvzX1u"
 			]
 		}
 	},
