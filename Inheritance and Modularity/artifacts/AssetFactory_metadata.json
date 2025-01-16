@@ -1,0 +1,65 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "balances",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Inheritance and Modularity/Asset Factory.sol": "AssetFactory"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Inheritance and Modularity/Asset Factory.sol": {
+			"keccak256": "0x1f377ecd72ec8a7cc50027658d965f4f0eaaed4400fb19696fe5a016e8fcc293",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://506c3220216792e0789271ac52bdbc92a0406bbc144a9514d947df98d51ea290",
+				"dweb:/ipfs/Qmd4srS9V6HENDu7BgZfR3BgvHjab529xSj63AsTMyq1Fx"
+			]
+		}
+	},
+	"version": 1
+}
