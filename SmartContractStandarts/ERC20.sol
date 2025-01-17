@@ -11,7 +11,7 @@ contract ERC20 {
     uint256 public totalSupply;
     mapping(address => uint256) public balanceoF;
 
-    mapping(address => mapping(address => uint256)) public approvals;
+    mapping(address => mapping(address => uint256)) public allowance;
 
     constructor(string memory newName, string memory newSymbol) {
         name = newName;
@@ -44,15 +44,15 @@ contract ERC20 {
         address _to,
         uint256 _value
     ) public returns (bool success) {
-        if (approvals[_from][msg.sender] < _value) {
+        if (allowance[_from][msg.sender] < _value) {
             revert InsufficientApproval();
         }
 
-        approvals[_from][msg.sender] -= _value;
-        
+        allowance[_from][msg.sender] -= _value;
+
         if (balanceoF[_from] < _value) {
             revert InsufficientBalance();
-        }
+        }  
 
         balanceoF[_from] -= _value;
         balanceoF[_to] += _value;
@@ -66,7 +66,7 @@ contract ERC20 {
         public
         returns (bool success)
     {
-        approvals[msg.sender][_spender] = _value;
+        allowance[msg.sender][_spender] = _value;
         return true;
     }
 }

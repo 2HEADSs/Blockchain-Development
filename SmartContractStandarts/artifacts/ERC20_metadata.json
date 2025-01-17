@@ -50,7 +50,7 @@
 						"type": "address"
 					}
 				],
-				"name": "approvals",
+				"name": "allowance",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -238,11 +238,11 @@
 	},
 	"sources": {
 		"SmartContractStandarts/ERC20.sol": {
-			"keccak256": "0xb7fdaf6057db87b14dfd6acaed5ab035055aeadf9b42c92a86f6d05e345fa941",
+			"keccak256": "0x021a3232f168df943ca8f5f7e9a1ab8f4a448c5d552a4c418e8c93ea7bed8362",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://45d92376eafb0419d43f36ea49ad6ced258e0617cd7c2436c58b0ec8eb10a75b",
-				"dweb:/ipfs/QmfLjDjb4j4SiPG8qKnM2f6p2ALC4dth91ggo6YoSjdbf7"
+				"bzz-raw://e04b07942a64fbf91f36dad991f12f7bce7811c0de049bfefdb8c6354451d6fc",
+				"dweb:/ipfs/Qme6VDqakVKceYcc9RA8p9bWomtiTDQBCVaxDWJ2kpZFkf"
 			]
 		}
 	},
