@@ -149,6 +149,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					}
+				],
+				"name": "burn",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "decimals",
 				"outputs": [
@@ -162,6 +175,24 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					}
+				],
+				"name": "mint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "name",
 				"outputs": [
@@ -169,6 +200,19 @@
 						"internalType": "string",
 						"name": "",
 						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -282,11 +326,11 @@
 	},
 	"sources": {
 		"SmartContractStandarts/ERC20.sol": {
-			"keccak256": "0x16eac1c6f0edffe4477c2b4234db41d88d170dc503fbc5be2c74ecb5e5c32789",
+			"keccak256": "0x032463c4f070afea6128f02636499d0fb34a4b7e30048832ce3f0aac632f7f67",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7149b323de9582b5772da1b355204d407919eada372bb84ed03d3d0d36068f02",
-				"dweb:/ipfs/QmP1aj4rchGo5qWnztXTfPaVLMPMSThNSVnnPGpa16bTan"
+				"bzz-raw://c64c8f4d07bd88226dab93a51b405077e5633977039127cb294b5c19b5b7f81c",
+				"dweb:/ipfs/Qmb82Eve8AiHa6h3k9Zb4MMoQ6aVHeJAek4mBqTXxnXdT2"
 			]
 		}
 	},

@@ -13,6 +13,8 @@ contract ERC20 {
 
     mapping(address => mapping(address => uint256)) public allowance;
 
+    address public owner;
+
     constructor(string memory newName, string memory newSymbol) {
         name = newName;
         symbol = newSymbol;
@@ -20,6 +22,7 @@ contract ERC20 {
         uint256 supply = 1000 * 10**decimals;
         balanceoF[msg.sender] = supply;
         totalSupply = supply;
+        owner = msg.sender;
     }
 
     event Transfer(address indexed _from, address indexed _to, uint256 _value);
@@ -76,4 +79,15 @@ contract ERC20 {
 
         return true;
     }
+
+    function mint(address _to, uint256 _value) external {
+        if (msg.sender != owner) {
+            revert("Not owner");
+        }
+        balanceoF[_to] += _value;
+        totalSupply += _value;
+        emit Transfer(address(0), _to, _value);
+    }
+
+
 }
