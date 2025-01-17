@@ -4,6 +4,8 @@ pragma solidity 0.8.28;
 error InsufficientBalance();
 error InsufficientApproval();
 
+import "hardhat/console.sol";
+
 contract ERC20 {
     string public name;
     string public symbol;
@@ -23,6 +25,8 @@ contract ERC20 {
         balanceoF[msg.sender] = supply;
         totalSupply = supply;
         owner = msg.sender;
+        console.log("Initial supply: %d %s", supply, symbol);
+    
     }
 
     event Transfer(address indexed _from, address indexed _to, uint256 _value);

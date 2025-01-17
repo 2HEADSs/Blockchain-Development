@@ -326,11 +326,19 @@
 	},
 	"sources": {
 		"SmartContractStandarts/ERC20.sol": {
-			"keccak256": "0x032463c4f070afea6128f02636499d0fb34a4b7e30048832ce3f0aac632f7f67",
+			"keccak256": "0xcff2d099a54d21c6cb6e732bea8384dc1342402c45a65b6ea057ccff0164e7e7",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c64c8f4d07bd88226dab93a51b405077e5633977039127cb294b5c19b5b7f81c",
-				"dweb:/ipfs/Qmb82Eve8AiHa6h3k9Zb4MMoQ6aVHeJAek4mBqTXxnXdT2"
+				"bzz-raw://9595222fb75895dd4898395b558381eead7fddf315487b179267cd74b3eca804",
+				"dweb:/ipfs/Qmcb14iXLLyGgjZSp9L6pe2AqMWmJMoDMpJDVqp3hwjjaw"
+			]
+		},
+		"hardhat/console.sol": {
+			"keccak256": "0xf2560b5386574153057104d19a9e68a32ee912cf23c0c8df1fe9a0607f42d543",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a63166e036b040826baa513772451a79925daa304b38749100efb089ac07cdc2",
+				"dweb:/ipfs/QmUtMTxUFKU6a5oFXsEJnTPvb3QPb7GDDmSv5yZ1jFHDwR"
 			]
 		}
 	},
