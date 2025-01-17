@@ -89,5 +89,12 @@ contract ERC20 {
         emit Transfer(address(0), _to, _value);
     }
 
-
+    function burn(uint256 _value) external {
+        if (balanceoF[msg.sender] > _value) {
+            revert InsufficientBalance();
+        }
+        balanceoF[msg.sender] -= _value;
+        totalSupply -= _value;
+        emit Transfer(msg.sender, address(0), _value);
+    }
 }
