@@ -22,7 +22,12 @@ contract ERC20 {
         totalSupply = supply;
     }
 
-    event Transfer();
+    event Transfer(address indexed _from, address indexed _to, uint256 _value);
+    event Approval(
+        address indexed _owner,
+        address indexed _spender,
+        uint256 _value
+    );
 
     function transfer(address _to, uint256 _value)
         public
@@ -34,7 +39,7 @@ contract ERC20 {
         balanceoF[msg.sender] -= _value;
         balanceoF[_to] += _value;
 
-        emit Transfer();
+        emit Transfer(msg.sender, _to, _value);
 
         return true;
     }
@@ -52,12 +57,12 @@ contract ERC20 {
 
         if (balanceoF[_from] < _value) {
             revert InsufficientBalance();
-        }  
+        }
 
         balanceoF[_from] -= _value;
         balanceoF[_to] += _value;
 
-        emit Transfer();
+        emit Transfer(_from, _to, _value);
 
         return true;
     }
@@ -67,6 +72,8 @@ contract ERC20 {
         returns (bool success)
     {
         allowance[msg.sender][_spender] = _value;
+        emit Approval(msg.sender, _spender, _value);
+
         return true;
     }
 }

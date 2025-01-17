@@ -33,7 +33,51 @@
 			},
 			{
 				"anonymous": false,
-				"inputs": [],
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_spender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					}
+				],
+				"name": "Approval",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					}
+				],
 				"name": "Transfer",
 				"type": "event"
 			},
@@ -238,11 +282,11 @@
 	},
 	"sources": {
 		"SmartContractStandarts/ERC20.sol": {
-			"keccak256": "0x021a3232f168df943ca8f5f7e9a1ab8f4a448c5d552a4c418e8c93ea7bed8362",
+			"keccak256": "0x16eac1c6f0edffe4477c2b4234db41d88d170dc503fbc5be2c74ecb5e5c32789",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e04b07942a64fbf91f36dad991f12f7bce7811c0de049bfefdb8c6354451d6fc",
-				"dweb:/ipfs/Qme6VDqakVKceYcc9RA8p9bWomtiTDQBCVaxDWJ2kpZFkf"
+				"bzz-raw://7149b323de9582b5772da1b355204d407919eada372bb84ed03d3d0d36068f02",
+				"dweb:/ipfs/QmP1aj4rchGo5qWnztXTfPaVLMPMSThNSVnnPGpa16bTan"
 			]
 		}
 	},
