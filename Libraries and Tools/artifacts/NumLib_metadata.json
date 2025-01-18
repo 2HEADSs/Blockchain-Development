@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Libraries and Tools/MathLib.sol": "NumLib"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Libraries and Tools/MathLib.sol": {
+			"keccak256": "0xb82ef68d05bbe41180a0a6fb6e22081b0ae65bf39a21dcec9d82c62622987ea5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8bdeaf50b0261860d8391eca8a4838389a8e9ae1870c913cf49fc25e38a91d51",
+				"dweb:/ipfs/QmakKUB3ghX1UGbdnanLws7jmu3DNG9wFSRRKamFVN2dNf"
+			]
+		}
+	},
+	"version": 1
+}
