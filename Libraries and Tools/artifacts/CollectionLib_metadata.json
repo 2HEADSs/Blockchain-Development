@@ -33,11 +33,11 @@
 	},
 	"sources": {
 		"Libraries and Tools/CollectibleCard.sol": {
-			"keccak256": "0x1efe8ed70a628d9cc309ccbccd8168f1b3902c629dff1d6ab97a49706c7ec5c7",
+			"keccak256": "0x4d8d440e74cc7040de5ac1fb999239ad0d21eefed990e243190387c7806705c0",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8cf955fa94fb663c724fb1a05b3466e6d31ab42ca232382fab09ff7d888431ff",
-				"dweb:/ipfs/QmUorg6YrxG1rSZ5gd6U8NDLRBjWTvKbXiGQvimdUxqFuN"
+				"bzz-raw://6cfc275afa149764ca23696c7cbad7a0378edc2f6b6469650d08a1c9eef38059",
+				"dweb:/ipfs/QmUGbBipJm6FQ5tBUNjnUuVkCNvM7ByWWwQhtb34fPEqK4"
 			]
 		}
 	},

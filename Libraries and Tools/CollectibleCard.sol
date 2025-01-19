@@ -11,7 +11,7 @@ library CollectionLib {
     function exists(Card[] memory cards, uint256 id)
         internal
         pure
-        returns (bool)
+        returns (bool doesExist)
     {
         uint256 cardsLength = cards.length;
         assert(cardsLength < 10000);
@@ -20,7 +20,6 @@ library CollectionLib {
                 return true;
             }
         }
-        return false;
     }
 }
 
