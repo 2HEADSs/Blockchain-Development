@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Libraries and Tools/CollectibleCard.sol": "CollectionLib"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Libraries and Tools/CollectibleCard.sol": {
+			"keccak256": "0x1efe8ed70a628d9cc309ccbccd8168f1b3902c629dff1d6ab97a49706c7ec5c7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8cf955fa94fb663c724fb1a05b3466e6d31ab42ca232382fab09ff7d888431ff",
+				"dweb:/ipfs/QmUorg6YrxG1rSZ5gd6U8NDLRBjWTvKbXiGQvimdUxqFuN"
+			]
+		}
+	},
+	"version": 1
+}
