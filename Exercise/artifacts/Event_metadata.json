@@ -9,7 +9,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "eventOrganizer",
+						"name": "minter",
 						"type": "address"
 					},
 					{
@@ -18,14 +18,19 @@
 						"type": "string"
 					},
 					{
+						"internalType": "uint256",
+						"name": "date_",
+						"type": "uint256"
+					},
+					{
 						"internalType": "string",
 						"name": "location_",
 						"type": "string"
 					},
 					{
-						"internalType": "uint256",
-						"name": "date_",
-						"type": "uint256"
+						"internalType": "address",
+						"name": "organizer_",
+						"type": "address"
 					}
 				],
 				"stateMutability": "nonpayable",
@@ -132,6 +137,11 @@
 					}
 				],
 				"name": "ERC721NonexistentToken",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "NoMoreTickets",
 				"type": "error"
 			},
 			{
@@ -371,6 +381,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "organizer",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "owner",
 				"outputs": [
 					{
@@ -517,6 +540,19 @@
 						"internalType": "string",
 						"name": "",
 						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "ticketAvailability",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -865,11 +901,11 @@
 			]
 		},
 		"Exercise/Event.sol": {
-			"keccak256": "0xb989e2c19b9f2fbbd99464487530ee76f4f6f43b067d2394b1da9b3b0a30883f",
+			"keccak256": "0xd8b388b07e7ae6307c7e33a3d6dfe85936515d4e119d2319a2d2c3274ae40211",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://4d02fbba41b3bcaab7b73cf8cfdded03d4ed53bcf71cb0d3d52838717643ff6d",
-				"dweb:/ipfs/QmNNsAZmFrHCxP4B98rvPpqC2UTjVBkkULsnzmu4K6Wxey"
+				"bzz-raw://5a88ab223c2f6813494001b5904796f774c6af7fcff0095feb7b6a4185fa22a8",
+				"dweb:/ipfs/QmcNkErr4Gd9swfND4bBoPJuFNtNHUzxvqG9Yp2GpohsQ5"
 			]
 		}
 	},
