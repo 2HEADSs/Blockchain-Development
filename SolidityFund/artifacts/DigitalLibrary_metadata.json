@@ -9,17 +9,23 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "newLibrarian",
+						"name": "newAuthorizer",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "bookIndex",
+						"name": "bookId",
 						"type": "uint256"
 					}
 				],
-				"name": "addLibrarian",
-				"outputs": [],
+				"name": "addAuthorizedLibrarians",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "success",
+						"type": "bool"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
@@ -31,37 +37,13 @@
 						"type": "uint256"
 					}
 				],
-				"name": "allBooks",
+				"name": "books",
 				"outputs": [
 					{
 						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "newStatus",
+						"name": "id",
 						"type": "uint256"
 					},
-					{
-						"internalType": "uint256",
-						"name": "bookIndex",
-						"type": "uint256"
-					}
-				],
-				"name": "changeStatus",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
 					{
 						"internalType": "string",
 						"name": "title",
@@ -76,10 +58,77 @@
 						"internalType": "uint256",
 						"name": "publicationDate",
 						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "expirationDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum DigitalLibrary.Status",
+						"name": "status",
+						"type": "uint8"
+					},
+					{
+						"internalType": "address",
+						"name": "primaryLibrarian",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "readCount",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "title_",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "author_",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "publicationDate_",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "expirationDate_",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum DigitalLibrary.Status",
+						"name": "status_",
+						"type": "uint8"
+					},
+					{
+						"internalType": "address",
+						"name": "primaryLibrarian_",
+						"type": "address"
 					}
 				],
 				"name": "createBook",
-				"outputs": [],
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "bookId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "bookTitle",
+						"type": "string"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
@@ -87,16 +136,16 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "bookIndex",
+						"name": "bookId",
 						"type": "uint256"
 					},
 					{
 						"internalType": "uint256",
-						"name": "newExpirationDate",
+						"name": "newDate",
 						"type": "uint256"
 					}
 				],
-				"name": "extendExpirationDate",
+				"name": "dateManagement",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -115,7 +164,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"SolidityFund/DigitalLibrary.sol": "DigitalLibrary"
+			"SolidityFund/DigitalLibrary2.sol": "DigitalLibrary"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -129,11 +178,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"SolidityFund/DigitalLibrary.sol": {
-			"keccak256": "0x0bdce9edd0e50b9a9d56f8c9f3e6ac690513b3ddcfc764bdc1685fc8020db03b",
+		"SolidityFund/DigitalLibrary2.sol": {
+			"keccak256": "0xa698ae30a59661c78525af76b107b3f57d85bd9cf21d85921ff1244220b99f0a",
+			"license": "MIT",
 			"urls": [
-				"bzz-raw://50dc5e2320ccdb7abec26d1917e17c73b2b1481c19bf5a5ca86f9f65d58ed6bf",
-				"dweb:/ipfs/QmT7nyJZ2QFaV2DiejaKc7e3qEGAeHLTHUUHeCrxBsMmEw"
+				"bzz-raw://55a977973010f71d8b97fcf22eaec4be1c0ef820f76c9900dd7e7f173c1e8065",
+				"dweb:/ipfs/Qme5ucderNrb4pMkoePnpKQR4yNsMSdpPjf5a6AVwgdWkL"
 			]
 		}
 	},

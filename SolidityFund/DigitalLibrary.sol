@@ -16,7 +16,6 @@ contract DigitalLibrary {
         Status status;
         address primaryLibrarian;
         uint256 readCount;
-        address[] authorizedLibrarians;
     }
 
     mapping(uint256 => EBook[]) books;
