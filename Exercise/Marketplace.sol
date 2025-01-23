@@ -28,8 +28,9 @@ contract Marketplace {
 
     mapping(address => EventData) public events;
     mapping(address => uint256) public profits;
+    mapping(address => mapping(uint256 => bool)) public secondMarketListenings;
 
-    event NewEvent(address indexed  newEvent);
+    event NewEvent(address indexed newEvent);
 
     constructor(address feeCollector_) {
         feeCollector = feeCollector_;
@@ -41,11 +42,24 @@ contract Marketplace {
         string memory location,
         uint256 ticketPrice,
         BuyingOptiion salesType,
-        uint256 salesEnd
+        uint256 salesEnd,
+        uint256 ticketAvailability_,
+        bool isPriceCapSet_,
+        address whitelistedAddress_
     ) external {
         address newEvent = address(
-            new Event(address(this), eventName, date, location, msg.sender)
+            new Event(
+                address(this),
+                eventName,
+                date,
+                location,
+                msg.sender,
+                ticketAvailability_,
+                isPriceCapSet_,
+                whitelistedAddress_
+            )
         );
+
         emit NewEvent(newEvent);
 
         _listEvent(newEvent, ticketPrice, salesType, salesEnd);
@@ -85,6 +99,25 @@ contract Marketplace {
             salesType: salesType,
             salesEnds: salesEnd
         });
+    }
+
+    function buyOnSecodMarket(
+        address event_,
+        uint256 ticketId,
+        address owner
+    ) external payable {
+        if (events[event_].salesType != BuyingOptiion.FixedPrice) {
+            revert WrongdBuyingOptiion();
+        }
+
+        if (msg.value != events[event_].ticketPrice) {
+            revert InvalidInput("Wrong value");
+        }
+
+        profits[Event(event_).organizer()] += msg.value - SALE_FEE;
+        profits[feeCollector] += SALE_FEE;
+
+        Event(event_).safeTransferFrom(owner, msg.sender, ticketId);
     }
 
     function buyTicket(address event_) external payable {

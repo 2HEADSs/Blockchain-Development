@@ -48,6 +48,19 @@
 				"type": "error"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newEvent",
+						"type": "address"
+					}
+				],
+				"name": "NewEvent",
+				"type": "event"
+			},
+			{
 				"inputs": [],
 				"name": "MIN_SALE_PERIOD",
 				"outputs": [
@@ -71,6 +84,29 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "event_",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ticketId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "buyOnSecodMarket",
+				"outputs": [],
+				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
@@ -117,6 +153,21 @@
 						"internalType": "uint256",
 						"name": "salesEnd",
 						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ticketAvailability_",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "isPriceCapSet_",
+						"type": "bool"
+					},
+					{
+						"internalType": "address",
+						"name": "whitelistedAddress_",
+						"type": "address"
 					}
 				],
 				"name": "createEvent",
@@ -208,6 +259,30 @@
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "secondMarketListenings",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -375,19 +450,19 @@
 			]
 		},
 		"Exercise/Event.sol": {
-			"keccak256": "0xd8b388b07e7ae6307c7e33a3d6dfe85936515d4e119d2319a2d2c3274ae40211",
+			"keccak256": "0x9cc7d030cb3a4664f7efc161d9cc502d37c7ce1b17cd8c54e659f56483eb8bce",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5a88ab223c2f6813494001b5904796f774c6af7fcff0095feb7b6a4185fa22a8",
-				"dweb:/ipfs/QmcNkErr4Gd9swfND4bBoPJuFNtNHUzxvqG9Yp2GpohsQ5"
+				"bzz-raw://7198989546ab64b2ca233bcba2c4f8b224f892c79f3bb77712861cd9d282a8d0",
+				"dweb:/ipfs/QmWYRTDUAHQkZCizHyb3omVVBPvR8ER7mb3AY58nLXA3Q6"
 			]
 		},
 		"Exercise/Marketplace.sol": {
-			"keccak256": "0x15901fcc2504bcb8bf7da61e2717e599a546196beeef3e5d7d1c5680414a618e",
+			"keccak256": "0x5976a63a1a13c96a2bdb9b9473a5e062c0354e165a739172bddb4a4fc4191631",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://6f14a3db0791d44f018c5b7672f858f531d7f33a4d9cc2c652831d24b503d891",
-				"dweb:/ipfs/QmT5ehcTR1ZCn8tPRhgc339wvqno9EMgaCEmtwVh2jybh5"
+				"bzz-raw://f1d0b176c94049e3ed0e558360be78d4488febecfc3f45231d85e9bc9d5e1eaa",
+				"dweb:/ipfs/QmTQBKD2NFPbfzEfPNSRkJ2rESuxJcxLNEdFqZNU95984f"
 			]
 		}
 	},

@@ -12,6 +12,8 @@ contract Event is ERC721, Ownable {
     // date is timestamp
     uint256 public immutable date;
     address public immutable organizer;
+    bool public immutable isPriceCapSet;
+    address public whitelistedAddress;
 
     string public location;
     uint256 public ticketAvailability;
@@ -21,12 +23,21 @@ contract Event is ERC721, Ownable {
         string memory eventName,
         uint256 date_,
         string memory location_,
-        address organizer_
+        address organizer_,
+        uint256 ticketAvailability_,
+        bool isPriceCapSet_,
+        //TODO: Whitelistening must be per NFT (NFT buyer)
+        address whitelistedAddress_
     ) ERC721(eventName, "MTK") Ownable(minter) {
         date = date_;
         location = location_;
         organizer = organizer_;
         _nextTokenId = 1;
+        ticketAvailability = ticketAvailability_;
+        isPriceCapSet = isPriceCapSet_;
+        if (isPriceCapSet) {
+            whitelistedAddress = whitelistedAddress_;
+        }
     }
 
     function safeMint(address to) public onlyOwner {
@@ -42,33 +53,11 @@ contract Event is ERC721, Ownable {
         uint256 tokenId,
         address auth
     ) internal override returns (address) {
-        address from = _ownerOf(tokenId);
-
-        // Perform (optional) operator check
-        if (auth != address(0)) {
-            _checkAuthorized(from, auth, tokenId);
+        if (
+            isPriceCapSet && msg.sender != owner() && to != whitelistedAddress
+        ) {
+            revert("Invalid transfer (price cap");
         }
-
-        // Execute the update
-        if (from != address(0)) {
-            // Clear approval. No need to re-authorize or emit the Approval event
-            _approve(address(0), tokenId, address(0), false);
-
-            unchecked {
-                _balances[from] -= 1;
-            }
-        }
-
-        if (to != address(0)) {
-            unchecked {
-                _balances[to] += 1;
-            }
-        }
-
-        _owners[tokenId] = to;
-
-        emit Transfer(from, to, tokenId);
-
-        return from;
+        return super._update(to, tokenId, auth);
     }
 }

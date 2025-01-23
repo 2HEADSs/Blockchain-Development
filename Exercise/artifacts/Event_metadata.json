@@ -31,6 +31,21 @@
 						"internalType": "address",
 						"name": "organizer_",
 						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ticketAvailability_",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "isPriceCapSet_",
+						"type": "bool"
+					},
+					{
+						"internalType": "address",
+						"name": "whitelistedAddress_",
+						"type": "address"
 					}
 				],
 				"stateMutability": "nonpayable",
@@ -355,6 +370,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "isPriceCapSet",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "location",
 				"outputs": [
 					{
@@ -611,6 +639,19 @@
 				"name": "transferOwnership",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "whitelistedAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -901,11 +942,11 @@
 			]
 		},
 		"Exercise/Event.sol": {
-			"keccak256": "0xd8b388b07e7ae6307c7e33a3d6dfe85936515d4e119d2319a2d2c3274ae40211",
+			"keccak256": "0x9cc7d030cb3a4664f7efc161d9cc502d37c7ce1b17cd8c54e659f56483eb8bce",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5a88ab223c2f6813494001b5904796f774c6af7fcff0095feb7b6a4185fa22a8",
-				"dweb:/ipfs/QmcNkErr4Gd9swfND4bBoPJuFNtNHUzxvqG9Yp2GpohsQ5"
+				"bzz-raw://7198989546ab64b2ca233bcba2c4f8b224f892c79f3bb77712861cd9d282a8d0",
+				"dweb:/ipfs/QmWYRTDUAHQkZCizHyb3omVVBPvR8ER7mb3AY58nLXA3Q6"
 			]
 		}
 	},
