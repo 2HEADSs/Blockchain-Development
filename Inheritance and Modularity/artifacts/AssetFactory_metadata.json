@@ -53,11 +53,11 @@
 	},
 	"sources": {
 		"Inheritance and Modularity/Asset Factory.sol": {
-			"keccak256": "0x1f377ecd72ec8a7cc50027658d965f4f0eaaed4400fb19696fe5a016e8fcc293",
+			"keccak256": "0x865e1c464acb16922823b7e48cc8346ec5cc9e6b9283cdd07382c8eb8873c621",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://506c3220216792e0789271ac52bdbc92a0406bbc144a9514d947df98d51ea290",
-				"dweb:/ipfs/Qmd4srS9V6HENDu7BgZfR3BgvHjab529xSj63AsTMyq1Fx"
+				"bzz-raw://4895c1bfd4cb4c46faf031daabdc22fe35dc23fac3e76c9f20daffbed4f07e6c",
+				"dweb:/ipfs/QmYBHegZfcP7KNhBNk8DyWMb2TtjdJGwRfrNJjWE55gLCa"
 			]
 		}
 	},
