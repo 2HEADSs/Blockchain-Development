@@ -9,7 +9,7 @@
 				"inputs": [
 					{
 						"internalType": "string",
-						"name": "name",
+						"name": "_name",
 						"type": "string"
 					},
 					{
@@ -102,11 +102,11 @@
 	},
 	"sources": {
 		"Cyfrin Updraft/Smart Contract Development/SimpleStorage.sol": {
-			"keccak256": "0x282e27b69f4f3079ecb2c3418bb3bc16bd0506ee1fe9d6cdb07dedf4803b0f0d",
+			"keccak256": "0xb566619d3eff1365cb1b0e6dafc7d3068ab26486086ca6ce06728c2144582164",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9670b9b5009489b5392f45b595cfed0b1bd21f90ce32376c26a11ab693f3298c",
-				"dweb:/ipfs/QmXacRY1EgH5WkYb8a5779zZxvFjPppwpGtW2PZZuVJdK3"
+				"bzz-raw://70bc7414db7aa8c323e8bc22ee42322432b00b804f9640e575cbc4d1d554692b",
+				"dweb:/ipfs/QmcSDao1wfXo89YXe5Q3LcCKeBrVVuQ8AX4rzB6EVdEyXv"
 			]
 		}
 	},
