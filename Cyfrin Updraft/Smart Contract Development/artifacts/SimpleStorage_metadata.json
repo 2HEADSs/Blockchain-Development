@@ -6,8 +6,50 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_favouriteNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "addPerson",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "listOfPeople",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "favoriteNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
-				"name": "favoriteNumber",
+				"name": "retrive",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -60,11 +102,11 @@
 	},
 	"sources": {
 		"Cyfrin Updraft/Smart Contract Development/SimpleStorage.sol": {
-			"keccak256": "0xe50732865fc50b9a6f12cb1c1ad77a889bb08bbfb84e147deac38ea988141ed0",
+			"keccak256": "0x282e27b69f4f3079ecb2c3418bb3bc16bd0506ee1fe9d6cdb07dedf4803b0f0d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9abf46db4f0ee856f38d85a220c7e09af4ac92f00828de73cd3de2d906e9f7fc",
-				"dweb:/ipfs/QmSEQFT1XcezrQjLm1E9JgisQYcpPgmqbXGGDvhxetEwga"
+				"bzz-raw://9670b9b5009489b5392f45b595cfed0b1bd21f90ce32376c26a11ab693f3298c",
+				"dweb:/ipfs/QmXacRY1EgH5WkYb8a5779zZxvFjPppwpGtW2PZZuVJdK3"
 			]
 		}
 	},
