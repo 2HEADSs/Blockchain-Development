@@ -48,6 +48,25 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "nameToFavoriteNumber",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "retrive",
 				"outputs": [
@@ -102,11 +121,11 @@
 	},
 	"sources": {
 		"Cyfrin Updraft/Smart Contract Development/SimpleStorage.sol": {
-			"keccak256": "0xb566619d3eff1365cb1b0e6dafc7d3068ab26486086ca6ce06728c2144582164",
+			"keccak256": "0xc9f6fb146fc8f14c76eec6a736c091a40c855a677cb0b70a626889c66b9d5763",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://70bc7414db7aa8c323e8bc22ee42322432b00b804f9640e575cbc4d1d554692b",
-				"dweb:/ipfs/QmcSDao1wfXo89YXe5Q3LcCKeBrVVuQ8AX4rzB6EVdEyXv"
+				"bzz-raw://6d44de8a1f22c0d08fbbcc835a0b36bb3dfe32acdccc78ed017dbccd8d15d67b",
+				"dweb:/ipfs/QmWMGzjuJubDXhyvdcCJ88ZLxcXtE24hQC2JnNduRGPT1M"
 			]
 		}
 	},
