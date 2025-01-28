@@ -7,6 +7,7 @@ import "hardhat/console.sol";
 contract Lock {
     uint public unlockTime;
     address payable public owner;
+    int public balance;
 
     event Withdrawal(uint amount, uint when);
 

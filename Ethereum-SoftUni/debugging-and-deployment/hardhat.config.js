@@ -1,4 +1,4 @@
-const env = require("hardhat");
+// const env = require("hardhat");
 
 require("@nomicfoundation/hardhat-toolbox");
 require("./tasks/index.js");
