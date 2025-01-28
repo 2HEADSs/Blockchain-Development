@@ -2,7 +2,7 @@
 pragma solidity ^0.8.28;
 
 // Uncomment this line to use console.log
-// import "hardhat/console.sol";
+import "hardhat/console.sol";
 
 contract Lock {
     uint public unlockTime;
@@ -15,7 +15,6 @@ contract Lock {
             block.timestamp < _unlockTime,
             "Unlock time should be in the future"
         );
-
         unlockTime = _unlockTime;
         owner = payable(msg.sender);
     }
