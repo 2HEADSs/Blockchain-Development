@@ -1,0 +1,60 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "fund",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Cyfrin Updraft/Smart Contract Development/Fund Me/FundMe.sol": "FundMe"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Cyfrin Updraft/Smart Contract Development/Fund Me/FundMe.sol": {
+			"keccak256": "0xad75f6df3cadcd0914e3343231ed7ebf73a037551243bc8ca23d288a3565376f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7d581852f5584c1b5925a2b0395eac5d56abba7aaaee2c77ac23bcbd7bdb5d63",
+				"dweb:/ipfs/QmZL4CVaVpEhYqnnLbbFkRwRD3v3iA1gwt6fPXEJ6CAha4"
+			]
+		}
+	},
+	"version": 1
+}
