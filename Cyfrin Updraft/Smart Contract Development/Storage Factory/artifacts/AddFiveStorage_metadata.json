@@ -83,7 +83,7 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "_favoriteNumber",
+						"name": "_newNumber",
 						"type": "uint256"
 					}
 				],
@@ -106,7 +106,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"Cyfrin Updraft/Smart Contract Development/SimpleStorage.sol": "SimpleStorage"
+			"Cyfrin Updraft/Smart Contract Development/Storage Factory/AddFiveStorage.sol": "AddFiveStorage"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -120,12 +120,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"Cyfrin Updraft/Smart Contract Development/SimpleStorage.sol": {
-			"keccak256": "0x4794468567df9d7e16bedc36bde660d4ed1d4a7328dc6629bf926e1f66e581a9",
+		"Cyfrin Updraft/Smart Contract Development/Storage Factory/AddFiveStorage.sol": {
+			"keccak256": "0x486e83c39521bc4e7dee326293c62592e55258dd1bfa81e527925b7fe3b7ad62",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ba574864dadf5411af76e834cccc55b4da5f92f8daf94bf6cbe8ca8239a566f5",
-				"dweb:/ipfs/QmNmtBx9RqD3WhadSaYzNg8htQA4XkxgbCncAxQHsiUYq6"
+				"bzz-raw://9f4c0e2bfc331cec85c1e09ee7fd086ee747d08f87eba4060b98d98e2f24c41a",
+				"dweb:/ipfs/Qmbs5bcfN2hPE3PGBn7wcHLSEuEKCgEb58r7Ek6FPeZaUx"
+			]
+		},
+		"Cyfrin Updraft/Smart Contract Development/Storage Factory/SimpleStorage.sol": {
+			"keccak256": "0x25f143f65c6f50ad7c6900b0b5157784482e8338b2a2d58d2e41b169587866ac",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4b5511566e4342e55c5574b5c61e9dce2b94d261d2c2526b3bdc7a7f9548da30",
+				"dweb:/ipfs/QmTKAzmf7uTwDw2YczyRQb1v1oQaUtDyvEnrPfUCULGmuX"
 			]
 		}
 	},
