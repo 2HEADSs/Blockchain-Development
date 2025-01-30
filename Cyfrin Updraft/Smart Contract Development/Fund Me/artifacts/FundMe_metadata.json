@@ -9,14 +9,7 @@
 				"inputs": [],
 				"name": "fund",
 				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "withdraw",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "payable",
 				"type": "function"
 			}
 		],
@@ -48,11 +41,11 @@
 	},
 	"sources": {
 		"Cyfrin Updraft/Smart Contract Development/Fund Me/FundMe.sol": {
-			"keccak256": "0xad75f6df3cadcd0914e3343231ed7ebf73a037551243bc8ca23d288a3565376f",
+			"keccak256": "0x295c0e26ce8146fdeb79795dcd78e45a1b0b057da7581c8c1be124594a090d02",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7d581852f5584c1b5925a2b0395eac5d56abba7aaaee2c77ac23bcbd7bdb5d63",
-				"dweb:/ipfs/QmZL4CVaVpEhYqnnLbbFkRwRD3v3iA1gwt6fPXEJ6CAha4"
+				"bzz-raw://af0a01bcf27bfb7419220ffa49495c422a69f2dbf4ebcf1a7f9dd01ea7ef068a",
+				"dweb:/ipfs/QmYbBWN4YRpuGduhDgVbPTawYzH5VmVobc2HTbGHhC6Hta"
 			]
 		}
 	},
