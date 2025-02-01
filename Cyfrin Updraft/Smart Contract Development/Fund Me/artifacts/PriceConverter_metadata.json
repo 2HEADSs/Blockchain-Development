@@ -1,0 +1,53 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Cyfrin Updraft/Smart Contract Development/Fund Me/PriceConverter.sol": "PriceConverter"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol": {
+			"keccak256": "0x257a8d28fa83d3d942547c8e129ef465e4b5f3f31171e7be4739a4c98da6b4f0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6d39e11b1dc7b9b8ccdabbc9be442ab7cda4a81c748f57e316dcb1bcb4a28bf9",
+				"dweb:/ipfs/QmaG6vz6W6iEUBsbHSBob5mdcitYxWjoygxREHpsJHfWrS"
+			]
+		},
+		"Cyfrin Updraft/Smart Contract Development/Fund Me/PriceConverter.sol": {
+			"keccak256": "0xa05b8cda679bebeab53e23b8980d7674e846446c90219099ae2b8f0b35df411d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3ffcd3a23e8313209ea6322273db436b8f26669d52bad4dce8fd3f06024c23f4",
+				"dweb:/ipfs/QmTqt6NpinkHuvc3PQzp2ch8hxSAZsoKX7WqoMbhez1VZk"
+			]
+		}
+	},
+	"version": 1
+}
