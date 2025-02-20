@@ -1,0 +1,67 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [],
+				"name": "result",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Cyfrin Updraft/Smart Contract Development/Fund Me/FallbackExample.sol": "FallbackExample"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Cyfrin Updraft/Smart Contract Development/Fund Me/FallbackExample.sol": {
+			"keccak256": "0xe6c7c9cb5b82bf775a7c95ac570730489ed75f593b2b7ae9b4ee9d253fba62d3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ce722b4b09e1bfb98aadb5114fc69d27d84670fe59eb49c57d71c4ad7788ff0e",
+				"dweb:/ipfs/QmaA1kFUgoTi7DJzX24Er3GVFKd7w6oDLw4sMS97Z6qfZs"
+			]
+		}
+	},
+	"version": 1
+}
