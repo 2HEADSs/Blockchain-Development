@@ -16,6 +16,10 @@
 				"type": "error"
 			},
 			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
 				"inputs": [],
 				"name": "MINIMUM_USD",
 				"outputs": [
@@ -92,6 +96,10 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -130,11 +138,11 @@
 			]
 		},
 		"Cyfrin Updraft/Smart Contract Development/Fund Me/FundMe.sol": {
-			"keccak256": "0x312f909b46682397200f0c506cca6d9e6cc61d8823f49f848e5d5c57302a12c0",
+			"keccak256": "0xff1554535395c18b504feaac3d1498ccf8b01d35fe96cd70cc5e393dddbeccd0",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ab8db8924cc61b7690feb2400f7242394dc60bc116caf859ef87167bf7dc41b9",
-				"dweb:/ipfs/QmTDCNQj3VnumjLZjG6nWeknX4DhhpjMzRZxRbtw4jPQVE"
+				"bzz-raw://ccfeefc9053e595b3e36b369f964444153c3c26fc54e03839d0643793b77cad7",
+				"dweb:/ipfs/QmWgPLdEtq4e6eECH89wMh4TEeaugLNCzUmcLp3RZpriyX"
 			]
 		},
 		"Cyfrin Updraft/Smart Contract Development/Fund Me/PriceConverter.sol": {
