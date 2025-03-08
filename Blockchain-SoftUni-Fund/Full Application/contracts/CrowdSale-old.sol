@@ -2,11 +2,9 @@
 pragma solidity 0.8.28;
 
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
-import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-
 import {ICustomToken} from "./ICustomToken.sol";
 
-contract Crowdsale is Ownable {
+contract CrowdSale is Ownable {
     uint256 public constant MIN_SALE_PERIOD = 1 weeks;
 
     address public token;
@@ -14,50 +12,27 @@ contract Crowdsale is Ownable {
     uint256 public startTime;
     uint256 public endTime;
     address public feeReceiver;
-    uint256 public tokensForSale;
-    uint256 public tokensSold;
+    uint256 tokensForSale;
+    uint256 tokenSold;
     bool public isFinished;
 
     error InvalidStartTime(string message);
     error InvalidEndTime(string message);
     error InvalidFeeReceiver();
     error OutOfSalePeriod();
-    error SaleActive();
-    error UnsuccessfulWithdrawal();
-    error AlreadyFinished();
-    error InputValueTooSmall();
-    error InsufficientTokens();
-
-    event SaleInitialized(
-        uint256 startTime,
-        uint256 endTime,
-        uint256 price,
-        address feeReceiver,
-        address token,
-        uint256 tokensForSale
-    );
-
-    event TokensPurchased(
-        address indexed buyer,
-        address indexed receiver,
-        uint256 ethAmount,
-        uint256 tokenAmount
-    );
-
-    event SaleFinalized(
-        uint256 tokensSold,
-        uint256 ethRaised,
-        uint256 remainingTokens
-    );
+    error SaleIsStillActive();
+    error UnsuccessfulWithdraw();
+    error SaleAlreadyFinished();
 
     constructor(address owner) Ownable(owner) {}
 
     /**
-     * Set initial Crowdsawe parameters
-     * @param _startTime start of the sale
+     * Set initial CrowdSale parameters
+     * @param _startTime start the sale
      * @param _endTime end of the sale
      * @param _rateETH how much tokens are sold for 1 ETH
      */
+
     function initialize(
         uint256 _startTime,
         uint256 _endTime,
@@ -79,14 +54,13 @@ contract Crowdsale is Ownable {
                 "End time must be at least MIN_SALE_PERIOD after start time"
             );
         }
-
         if (_feeReceiver == address(0)) {
             revert InvalidFeeReceiver();
         }
 
+        price = _rateETH;
         startTime = _startTime;
         endTime = _endTime;
-        price = _rateETH;
         feeReceiver = _feeReceiver;
         token = _token;
         tokensForSale = _tokensForSale;
@@ -94,15 +68,6 @@ contract Crowdsale is Ownable {
         ICustomToken(token).transferFrom(
             msg.sender,
             address(this),
-            tokensForSale
-        );
-
-        emit SaleInitialized(
-            startTime,
-            endTime,
-            price,
-            feeReceiver,
-            token,
             tokensForSale
         );
     }
@@ -115,48 +80,27 @@ contract Crowdsale is Ownable {
         ) {
             revert OutOfSalePeriod();
         }
-
-        uint256 tokensToReceive = (msg.value *
+        uint256 tokenToReceive = (msg.value *
             price *
             (10 ** ICustomToken(token).decimals())) / 1 ether;
 
-        if (tokensToReceive == 0) {
-            revert InputValueTooSmall();
-        }
-
-        if (tokensSold + tokensToReceive > tokensForSale) {
-            revert InsufficientTokens();
-        }
-
-        tokensSold += tokensToReceive;
-
-        ICustomToken(token).transfer(receiver, tokensToReceive);
-
-        emit TokensPurchased(msg.sender, receiver, msg.value, tokensToReceive);
+        ICustomToken(token).transfer(receiver, tokenToReceive);
     }
 
     function finalizeSale() external onlyOwner {
         if (isFinished) {
-            revert AlreadyFinished();
+            revert SaleAlreadyFinished();
         }
-
-        if (tokensSold < tokensForSale && block.timestamp <= endTime) {
-            revert SaleActive();
+        if (tokenSold < tokensForSale || block.timestamp <= endTime) {
+            revert SaleIsStillActive();
         }
 
         isFinished = true;
-
-        uint256 remainingTokens = ICustomToken(token).balanceOf(address(this));
-        uint256 ethRaised = address(this).balance;
-
-        (bool success, ) = feeReceiver.call{value: ethRaised}("");
+        (bool success, ) = feeReceiver.call{value: address(this).balance}("");
         if (!success) {
-            revert UnsuccessfulWithdrawal();
+            revert UnsuccessfulWithdraw();
         }
 
-        ICustomToken(token).transfer(owner(), remainingTokens);
-
-        emit SaleFinalized(tokensSold, ethRaised, remainingTokens);
+        ICustomToken(token).transfer(owner(), ICustomToken(token).balanceOf(address(this)));
     }
 }
-
