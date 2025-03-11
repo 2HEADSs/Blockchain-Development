@@ -21,7 +21,7 @@ error CannotBeZero();
 error InvalidStartTime();
 error InvalidEndTime(string argument);
 error InsufficientBid();
-error NotBidPeriodClosed();
+error NotBidPeriod();
 error NotValidAuction();
 error AuctionUnfinished();
 error NotClaimer();
@@ -62,7 +62,7 @@ contract AuctionHouse {
         }
 
         if (endTime > startTime + MAX_AUCTION_DURATION) {
-            revert InvalidEndTime("HIGH");
+            revert InvalidEndTime("TOO HIGH");
         }
 
         uint256 auctionId = _nextAuctionId++;
@@ -84,7 +84,7 @@ contract AuctionHouse {
     }
 
     function bid(uint256 auctionId) external payable {
-        Auction memory auction = auctions[auctionId];
+        Auction storage auction = auctions[auctionId];
 
         if (auction.nftAddress == address(0)) {
             revert NotValidAuction();
@@ -94,12 +94,15 @@ contract AuctionHouse {
             block.timestamp < auction.startTime ||
             block.timestamp > auction.endTime
         ) {
-            revert NotBidPeriodClosed();
+            revert NotBidPeriod();
         }
+
+        uint256 newBid = bids[auctionId][msg.sender] + msg.value;
+
         if (
             msg.value < auction.minPrice ||
             (highestBidders[auctionId] != address(0) &&
-                msg.value <
+                newBid <
                 bids[auctionId][highestBidders[auctionId]] + auction.minBidIncr)
         ) {
             revert InsufficientBid();
@@ -109,7 +112,7 @@ contract AuctionHouse {
             auction.endTime += auction.timeExtensionIncr;
         }
 
-        bids[auctionId][msg.sender] += msg.value;
+        bids[auctionId][msg.sender] = newBid;
         highestBidders[auctionId] = msg.sender;
     }
 
@@ -167,7 +170,7 @@ contract AuctionHouse {
             revert AlreadyClaimed();
         }
         auction.rewardClaimed = true;
-        
+
         _transferETH(payable(msg.sender), reward);
     }
 
