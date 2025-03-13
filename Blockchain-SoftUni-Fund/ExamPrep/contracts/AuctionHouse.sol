@@ -2,6 +2,7 @@
 pragma solidity ^0.8.25;
 
 import {IERC721} from "@openzeppelin/contracts/token/ERC721/IERC721.sol";
+import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
 struct Auction {
     uint256 tokenId;
@@ -28,8 +29,9 @@ error NotClaimer();
 error AlreadyClaimed();
 error HighestBidder();
 error NotWinner();
+error NotSeller();
 
-contract AuctionHouse {
+contract AuctionHouse is Ownable {
     uint256 MIN_AUCTION_DURATION = 1 days;
     uint256 MAX_AUCTION_DURATION = 60 days;
     uint256 private _nextAuctionId;
@@ -38,6 +40,23 @@ contract AuctionHouse {
     mapping(uint256 auctionId => mapping(address bidder => uint256 bid))
         public bids;
     mapping(uint256 auctionId => address highestBidder) public highestBidders;
+
+    event AuctionCreated(uint256 indexed auctionId);
+    event NewBid(
+        uint256 indexed auctionId,
+        address indexed bidder,
+        uint256 bid
+    );
+
+    event NftClaimed(uint256 indexed auctionId);
+    event BidClaimed(
+        uint256 indexed auctionId,
+        address indexed bidder,
+        uint256 bid
+    );
+    event RewardClaimed(uint256 indexed auctionId, uint256 reward, uint256 fee);
+
+    constructor() Ownable(msg.sender) {}
 
     function createAuction(
         uint256 tokenId,
@@ -81,6 +100,8 @@ contract AuctionHouse {
         });
         // @note The NFT needs allowance
         IERC721(tokenAddres).transferFrom(msg.sender, address(this), tokenId);
+
+        emit AuctionCreated(auctionId);
     }
 
     function bid(uint256 auctionId) external payable {
@@ -114,6 +135,8 @@ contract AuctionHouse {
 
         bids[auctionId][msg.sender] = newBid;
         highestBidders[auctionId] = msg.sender;
+
+        emit NewBid(auctionId, msg.sender, newBid);
     }
 
     function claimNFT(uint256 auctionId) external auctionFinished(auctionId) {
@@ -142,6 +165,8 @@ contract AuctionHouse {
             receiver,
             auction.tokenId
         );
+
+        emit NftClaimed(auctionId);
     }
 
     function claimBid(uint256 auctionId) external {
@@ -169,9 +194,19 @@ contract AuctionHouse {
         if (auction.rewardClaimed) {
             revert AlreadyClaimed();
         }
+
+        if (msg.sender != auction.seller) {
+            revert NotSeller();
+        }
         auction.rewardClaimed = true;
 
+        uint256 fee = (reward / 100);
+        if (fee > 0) {
+            _transferETH(payable(owner()), fee);
+        }
         _transferETH(payable(msg.sender), reward);
+
+        emit RewardClaimed(auctionId, reward, fee);
     }
 
     function _transferETH(address payable to, uint256 amount) private {
