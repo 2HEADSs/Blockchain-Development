@@ -6,6 +6,11 @@ task("deploy", "Deploys NFT and AuctionHouse contracts")
         const [deployer] = await hre.ethers.getSigners();
         console.log("Deploying contracts with account:", deployer.address);
 
+
+        const balance = await hre.ethers.provider.getBalance(deployer.address);
+        const balanceInEth = hre.ethers.formatEther(balance);
+        console.log("Deploying contracts with amount:", balanceInEth, "ETH");
+
         // CustomToken
         const CustomToken = await hre.ethers.getContractFactory("NFT");
         console.log(taskArgs.owner);
