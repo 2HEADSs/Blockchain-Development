@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.28;
+pragma solidity ^0.8.28;
 struct Vote {
     address shareholder;
     uint256 shares;
@@ -19,10 +19,10 @@ contract CrowdFunding {
     }
 
     function buyShares() external payable {
-        if(msg.value < sharePrice){
-            revert InsuficientAmount(); 
+        if (msg.value < sharePrice) {
+            revert InsuficientAmount();
         }
-        if(msg.value % sharePrice >0){
+        if (msg.value % sharePrice > 0) {
             revert InsuficientAmount();
         }
         uint256 sharesToReceive = msg.value / sharePrice;
