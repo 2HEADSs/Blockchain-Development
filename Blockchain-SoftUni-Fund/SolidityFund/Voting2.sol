@@ -26,4 +26,12 @@ contract Voting2 {
 
         votes[msg.sender] = Voter({hasVoted: true, choice: id});
     }
+
+    function getVoterStatus(address voter)
+        public
+        view
+        returns (bool hasVoted, uint256 choice)
+    {
+        return (votes[voter].hasVoted, votes[voter].choice);
+    }
 }
