@@ -66,13 +66,13 @@ contract DigitalLibrary {
 
         books[allBooks.length - 1] = newBook;
 
-        allBooks.push(bookId);
+        allBooks.push(newBook);
     }
 
-    function addLibrarian(address newLibrarian, uint256 bookIndex)
-        public
-        validIndex(bookIndex)
-    {
+    function addLibrarian(
+        address newLibrarian,
+        uint256 bookIndex
+    ) public validIndex(bookIndex) {
         require(
             msg.sender == booksList[bookIndex].primaryLibrarian,
             "Only Primary Librarian can add Authorized Librarians"
@@ -80,20 +80,19 @@ contract DigitalLibrary {
         booksList[bookIndex].authorizedLibrarians.push(newLibrarian);
     }
 
-    function extendExpirationDate(uint256 bookIndex, uint256 newExpirationDate)
-        public
-        validIndex(bookIndex)
-        validAuthorizedLibrarioan(bookIndex)
-    {
+    function extendExpirationDate(
+        uint256 bookIndex,
+        uint256 newExpirationDate
+    ) public validIndex(bookIndex) validAuthorizedLibrarioan(bookIndex) {
         booksList[bookIndex].expirationDate =
             block.timestamp +
             newExpirationDate;
     }
 
-    function changeStatus(uint256 newStatus, uint256 bookIndex)
-        public
-        validIndex(bookIndex)
-    {
+    function changeStatus(
+        uint256 newStatus,
+        uint256 bookIndex
+    ) public validIndex(bookIndex) {
         require(
             msg.sender == booksList[bookIndex].primaryLibrarian,
             "Only Primary Librarian can add Authorized Librarians"
