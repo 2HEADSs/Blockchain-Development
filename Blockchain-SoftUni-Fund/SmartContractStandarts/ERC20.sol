@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.28;
+pragma solidity 0.8.29;
 
 error InsufficientBalance();
 error InsufficientApproval();
 
-import "hardhat/console.sol";
+// import "hardhat/console.sol";
 
 contract ERC20 {
     string public name;
@@ -25,7 +25,7 @@ contract ERC20 {
         balanceoF[msg.sender] = supply;
         totalSupply = supply;
         owner = msg.sender;
-        console.log("Initial supply: %d %s", supply, symbol);
+        // console.log("Initial supply: %d %s", supply, symbol);
     
     }
 
