@@ -49,5 +49,7 @@ contract BrewBeanPoints is ERC20, BaseLoyaltyProgram {
 
     function redeemPoints(uint256 _amount) external override {
         require(balanceoF[msg.sender] >= _amount, "Insufficient balance");
+        _burn(msg.sender, _amount);
+        emit Redeemed(msg.sender, _amount);
     }
 }

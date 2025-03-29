@@ -8,11 +8,10 @@ struct Card {
 }
 
 library CollectionLib {
-    function exists(Card[] memory cards, uint256 id)
-        internal
-        pure
-        returns (bool doesExist)
-    {
+    function exists(
+        Card[] memory cards,
+        uint256 id
+    ) internal pure returns (bool doesExist) {
         uint256 cardsLength = cards.length;
         assert(cardsLength < 10000);
         for (uint256 i = 0; i < cardsLength; i++) {
@@ -29,11 +28,8 @@ contract CollectibleCardLibrary {
 
     error AlreadyExist();
 
-    function addCard(
-        uint256 id,
-        uint256 power,
-        string calldata name
-    ) external {
+    function addCard(uint256 id, uint256 power, string calldata name) external {
+        // CollectionLib.exists(collections[msg.sender], id);
         if (collections[msg.sender].exists(id)) {
             revert();
         }
