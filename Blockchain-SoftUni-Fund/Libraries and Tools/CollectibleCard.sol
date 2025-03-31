@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.28;
 
+import "@openzeppelin/contracts/ownership/Ownable.sol";
+
 struct Card {
     uint256 id;
     uint256 power;
