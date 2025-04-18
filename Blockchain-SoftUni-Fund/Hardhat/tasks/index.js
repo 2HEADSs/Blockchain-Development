@@ -7,6 +7,11 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
     }
 });
 
+task("currentBlock", "Prints the current block", async (taskArgs, hre) => {
+    const block = await hre.ethers.provider.getBlockNumber();
+    console.log(block);
+});
+
 task("balance", "Prints an account's balance")
     .addParam("address", "the addres to send to")
     .setAction(async (taskArgs, hre) => {

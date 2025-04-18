@@ -56,7 +56,7 @@ contract Event is ERC721, Ownable {
         if (
             isPriceCapSet && msg.sender != owner() && to != whitelistedAddress
         ) {
-            revert("Invalid transfer (price cap");
+            revert("Invalid transfer (price cap"));
         }
         return super._update(to, tokenId, auth);
     }
