@@ -1,6 +1,7 @@
 const ethers = require("ethers");
 
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
+    console.log("🔗 Connected network:", hre.network.name);
     const accounts = await hre.ethers.getSigners();
     for (const account of accounts) {
         console.log(account.address);
@@ -8,6 +9,8 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 });
 
 task("currentBlock", "Prints the current block", async (taskArgs, hre) => {
+    console.log("🔗 Connected network:", hre.network.name);
+
     const block = await hre.ethers.provider.getBlockNumber();
     console.log(block);
 });
@@ -21,6 +24,8 @@ task("balance", "Prints an account's balance")
         const res = await provider.getBalance(taskArgs.address);
         console.log(res);
         console.log("result in ETH", ethers.formatEther(res));
+        console.log("🔗 Connected network:", hre.network.name);
+
     });
 
 task("send", "Send ETH to given address")
@@ -35,6 +40,7 @@ task("send", "Send ETH to given address")
 
         console.log("Tx send");
         console.log(tx);
+        console.log("🔗 Connected network:", hre.network.name);
 
         const receipt = await tx.wait();
         console.log("Tx mined");
@@ -51,6 +57,8 @@ task("contract", "Send ETH to given address")
         const tx = contract.withdraw().catch(
             err => console.log(err.message));
         console.log("Tx send!");
+        console.log("🔗 Connected network:", hre.network.name);
+
 
     });
 
